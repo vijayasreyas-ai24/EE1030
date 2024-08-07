@@ -1,0 +1,425 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{multicol}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Assignment - 1}
+\author{AI24BTECH11003 - B. Vijaya Sreyas}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\maketitle\large{\textbf{17.Indefinite Integrals - Section B}}\small
+
+\begin{enumerate}[label=\textcolor{black}{\arabic*.}]
+		\setcounter{enumi}{4}
+%5
+	\item The value of $\sqrt{2}\int\frac{\sin xdx}{\sin \brak{x-\frac{\pi}{4}}}$
+		\hfill{(2008)}
+
+		(a)$x+log|\cos \brak{x-\frac{\pi}{4}}|+c$
+
+		(b)$x-log|\sin \brak{x-\frac{\pi}{4}}|+c$
+
+		(c)$x+log|\sin \brak{x-\frac{\pi}{4}}|+c$
+
+		(d)$x-log|\cos \brak{x-\frac{\pi}{4}}|+c$
+
+%6
+	\item If the $\int\frac{5\tan x}{\tan x-2}dx=x+aln\mod{\sin x-2\cos x}+k$, then $a$ is equal to
+		\hfill{(2018)}
+
+		\begin{multicols}{4}
+			\begin{enumerate}[label=(\alph*)]
+				\item -1
+				\item 2
+				\item 1
+				\item 2
+			\end{enumerate}
+		\end{multicols}
+		
+%7
+	\item If $\int f\brak{x}dx=\psi\brak{x}$, then $\int x^5f\brak{x^3}dx$ is equal to:
+
+		\hfill{(JEE M 2013)}
+
+		(a) $\frac{1}{3}[x^3\psi\brak{x^3}-\int x^2\psi(x^3)dx] + C$
+
+		(b) $\frac{1}{3}x^3\psi\brak{x^3}-3\int x^3\psi(x^3)dx + C$
+
+		(c) $\frac{1}{3}x^3\psi\brak{x^3}-\int x^2\psi(x^3)dx + C$
+
+		(d) $\frac{1}{3}[x^3\psi\brak{x^3}-\int x^3\psi(x^3)dx] + C$
+
+%8
+	\item The integral $\int\brak{1+x-\frac{1}{x}}e^{x+\frac{1}{x}}dx$ is equal to
+
+		\hfill{(JEE M 2014)}
+
+		\begin{multicols}{2}
+			\begin{enumerate}[label=(\alph*)]
+				\item $\brak{x+1}e^{x+\frac{1}{x}}+c$
+				\item $-xe^{x+\frac{1}{x}}+c$
+				\item $\brak{x-1}e^{x+\frac{1}{x}}+c$
+				\item $xe^{x+\frac{1}{x}}+c$
+			\end{enumerate}
+		\end{multicols}
+
+%9
+	\item The integral $\int\frac{dx}{x^2(x^4+1)^{3/4}}$ equals:
+		\hfill{(JEE M 2015)}
+
+		\begin{multicols}{2}
+			\begin{enumerate}[label=(\alph*)]
+				\item $-\brak{x^4+1}^{\frac{1}{4}}+c$
+				\item $-\brak{\frac{x^4+1}{x^4}}+c$
+				\item $\brak{\frac{x^4+1}{x^4}}^{\frac{1}{4}}+c$
+				\item $\brak{x^4+1}^{\frac{1}{4}}+c$
+			\end{enumerate}
+		\end{multicols}
+
+%10
+	\item The integral $\int\frac{2x^{12}+5x^9}{\brak{x^5+x^3+1}^3}dx$ is equal to
+		\hfill{(JEE M 2016)}
+
+		\begin{multicols}{2}
+			\begin{enumerate}[label=(\alph*)]
+				\item $\frac{x^5}{2\brak{x^5-x^3+1}^2}+C$
+				\item $\frac{-x^{10}}{2\brak{x^5+x^3+1}^2}+C$
+				\item $\frac{-x^5}{\brak{x^5+x^3+1}^2}+C$
+				\item $\frac{x^{10}}{2\brak{x^5+x^3+1}}+C$
+			\end{enumerate}
+		\end{multicols}
+		where C is an arbitrary constant
+
+%11
+	\item Let I$_n$ = $\int$tan$^x$dx, \brak{n>1}. I$_4$+I$_6$ = a $\tan^5$x + bx$^5$ + C, where C is constant of integration, then the ordered pair \brak{a, b} is equal to :
+		\hfill{(JEE M 2017)}
+
+		\begin{multicols}{4}
+			\begin{enumerate}[label=(\alph*)]
+				\item $\brak{-\frac{1}{5}, 0}$
+				\item $\brak{-\frac{1}{5}, 1}$
+				\item $\brak{\frac{1}{5}, 0}$
+				\item $\brak{\frac{1}{5},-1}$
+			\end{enumerate}
+		\end{multicols}
+		
+%12
+	\item The integral $\int\frac{sin^2xcos^2x}{\brak{sin^5x+cos^3xsin^2x+sin^3xcos^2x+cos^5x}^2}$dx is equal to
+		\hfill{(JEE M 2018)}
+		
+		\begin{multicols}{2}
+			\begin{enumerate}[label=(\alph*)]
+				\item $\frac{-1}{3\brak{1+\tan ^3x}}$ + C
+				\item $\frac{1}{1+\cot ^3x}$ + C
+				\item $\frac{-1}{1+\cot ^3x}$ + C
+				\item $\frac{1}{3\brak{1+\tan ^3x}}$ + C
+			\end{enumerate}
+		\end{multicols}
+		
+%13
+	\item For $x^2\neq$ n$\pi+1$, n$\in$N (the set of natural numbers), the integral $\int x\sqrt{\frac{2\sin \brak{x^2-1}-\sin 2\brak{x^2-1}}{2\sin \brak{x^2-1}+\sin 2\brak{x^2-1}}}$dx is equal to:
+
+		\hfill{(JEE M 2019 - 9 Jan(M))}
+
+		\begin{multicols}{1}
+			\begin{enumerate}[label=(\alph*)]
+				\item log$_e|\frac{1}{2}\sec ^2\brak{x^2-1}|$ + c
+				\item $\frac{1}{2}$log$_e|\sec ^2\brak{\frac{x^2-1}{2}}|$ + c
+				\item $\frac{1}{2}$log$_e|\sec ^2\brak{\frac{x^2-1}{2}}|$ + c
+				\item log$_2|\sec \brak{\frac{x^2-1}{2}}|$ + c
+			\end{enumerate}
+		\end{multicols}
+		(where c is a constant of integration)
+
+%14
+	\item The integral $\int \sec ^{2/3}x\cosec ^{4/3}x dx$ is equal to
+
+		\hfill{(JEE M 2019 - 9 April (M))}
+
+		\begin{multicols}{2}
+			\begin{enumerate}[label=(\alph*)]
+				\item -3$\tan ^{-1/3}$x+C
+				\item -$\frac{3}{4}\tan ^{-4/3}$x+C
+				\item -3$\cot ^{-1/3}$x+C
+				\item 3$\tan ^{-1/3}$+C
+			\end{enumerate}
+		\end{multicols}
+		(Here, C is a constant of integration)
+\end{enumerate}
+
+\maketitle\large{\textbf{18. Definite Integrals - Section B}}\small
+
+\begin{enumerate}[label=\textcolor{black}{\arabic*.}]
+		\setcounter{enumi}{30}
+
+%31
+
+	\item The area of the region bounded by the parabola $\brak{y-2}^2=x-1$, the tangent of the parabola at the point \brak{2, 3} and the $x$-axis is:
+		\hfill{(2009)}
+
+		\begin{multicols}{4}
+			\begin{enumerate}[label=(\alph*)]
+				\item 6
+				\item 9
+				\item 12
+				\item 3
+			\end{enumerate}
+		\end{multicols}
+			
+%32	
+		
+	\item $\int_0^\pi[\cot x]dx$, where [.] denotes the greatest integer function, is equal to
+		\hfill{(2009)}
+
+		\begin{multicols}{4}
+			\begin{enumerate}[label=(\alph*)]
+				\item 1
+				\item -1
+				\item $-\frac{\pi}{2}$
+				\item $\frac{\pi}{2}$
+			\end{enumerate}
+		\end{multicols}
+
+%33
+
+	\item The area bounded between the curves $y=\cos x$ and $y=\sin x$ between the ordinates $x=0$ and $x=\frac{3\pi}{2}$ is
+
+		\hfill{(2010)}
+
+		\begin{multicols}{2}
+			\begin{enumerate}[label=(\alph*)]
+				\item $4\sqrt{2}+2$
+				\item $4\sqrt{2}-1$
+				\item $4\sqrt{2}+1$
+				\item $4\sqrt{2}-2$
+			\end{enumerate}
+		\end{multicols}
+
+%34
+
+	\item Let $p\brak{x}$ be a function defined on \textbf{R} such that $p'\brak{x}=p'\brak{1-x}$, for all $x\in[0,1],p\brak{0}=1$ and $p\brak{1}=41$. Then $\int_0^1p\brak{x}dx$ equals
+		\hfill{(2010)}
+
+		\begin{multicols}{4}
+			\begin{enumerate}[label=(\alph*)]
+				\item 21
+				\item 41
+				\item 42
+				\item $\sqrt{41}$
+			\end{enumerate}
+		\end{multicols}
+
+%35
+
+	\item The value of $\int_0^1\frac{8log\brak{1+x}}{1+x^2}dx$ is
+		\hfill{(2011)}
+
+		\begin{multicols}{2}
+			\begin{enumerate}[label=(\alph*)]
+				\item $\frac{\pi}{8}$log2
+				\item $\frac{\pi}{2}$log2
+				\item log 2
+				\item $\pi$ log2
+			\end{enumerate}
+		\end{multicols}
+
+%36
+
+	\item The area of the region enclosed by the curves $y=x, x=e, y=\frac{1}{x}$ and the positive x axis is
+		\hfill{(2011)}
+
+		\begin{multicols}{2}
+			\begin{enumerate}[label=(\alph*)]
+				\item 1 square unit
+				\item $\frac{3}{2}$ square units
+				\item $\frac{5}{2}$ square units
+				\item $\frac{1}{2}$ square unit
+			\end{enumerate}
+		\end{multicols}
+
+%37
+
+	\item The area between the parabolas:$x^2=\frac{y}{4}$ and $x^2=9y$ and the straight line $y=2$ is:
+		\hfill{(2012)}
+
+		\begin{multicols}{4}
+			\begin{enumerate}[label=(\alph*)]
+				\item $20\sqrt{2}$
+				\item $\frac{10\sqrt{2}}{3}$
+				\item $\frac{20\sqrt{2}}{3}$
+				\item $10\sqrt{2}$
+			\end{enumerate}
+		\end{multicols}
+
+%38
+
+	\item If $g(x)=\int_0^x\cos 4t dt$, then $g\brak{x+\pi}$ equals
+		\hfill{(2012)}
+
+		\begin{multicols}{2}
+			\begin{enumerate}[label=(\alph*)]
+				\item $\frac{g(x)}{g\brak{\pi}}$
+				\item $g(x)+g\brak{\pi}$
+				\item $g(x)-g\brak{\pi}$
+				\item $g(x).g\brak{\pi}$
+			\end{enumerate}
+		\end{multicols}
+
+%39
+
+	\item \textbf{Statement-1 :} The value of the integral $\int_{\pi/6}^{\pi/3}\frac{dx}{1+\sqrt{\tan x}}$ is equal to $\pi/6$
+
+		\textbf{Statement-2 :} $\int_a^bf\brak{x}dx=\int_a^bf\brak{a+b-x}dx$.
+
+		\hfill{(JEE M 2013)}
+		
+		(a) Statement-1 is true; Statement-2 is true; Statement-2 is a correct explanation for Statement-1
+
+		(b) Statement-1 is true; Statement-2 is true; Statement-2 is not a correct explanation fo Statement-1
+
+		(c) Statement-1 is true; Statement-2 is false
+
+		(d) Statement-1 is false; Statement-2 is true
+
+%40
+
+	\item The area (in square units) bounded by the curves $y=\sqrt{x}$, $2y-x+3=0$, $x$-axis, and lying in the first quadrant is :
+		\hfill{(JEE M 2013)}
+
+		\begin{multicols}{4}
+			\begin{enumerate}[label=(\alph*)]
+				\item 9
+				\item 36
+				\item 18
+				\item $\frac{27}{4}$
+			\end{enumerate}
+		\end{multicols}
+
+
+%41
+
+	\item The integral $\int_0^{\pi}\sqrt{1+4\sin ^2\frac{x}{2}-4\sin \frac{x}{2}}dx$ equals:
+
+		\hfill{(JEE M 2014)}
+
+		\begin{multicols}{2}
+			\begin{enumerate}[label=(\alph*)]
+				\item $4\sqrt{3}-4$
+				\item $4\sqrt{3}-4-\frac{\pi}{3}$
+				\item $\pi-4$
+				\item $\frac{2\pi}{3}-4-4\sqrt{3}$
+			\end{enumerate}
+		\end{multicols}
+
+%42
+
+	\item The area of the region described by $A=\{(x,y):x^2+y^2\leq1$ and $y^2\leq1-x\}$ is:
+		\hfill{(JEE M 2014)}
+
+		\begin{multicols}{4}
+			\begin{enumerate}[label=(\alph*)]
+				\item $\frac{\pi}{2}-\frac{2}{3}$
+				\item $\frac{\pi}{2}+\frac{2}{3}$
+				\item $\frac{\pi}{2}+\frac{4}{3}$
+				\item $\frac{\pi}{2}-\frac{4}{3}$
+			\end{enumerate}
+		\end{multicols}
+
+%43
+
+	\item The area (in sq. units) of the region described by $\{\brak{x,y}:y^2\leq2x$ and $y\geq4x-1\}$ is
+		\hfill{(JEE M 2015)}
+
+		\begin{multicols}{4}
+			\begin{enumerate}[label=(\alph*)]
+				\item $\frac{15}{64}$
+				\item $\frac{9}{32}$
+				\item $\frac{7}{32}$
+				\item $\frac{5}{64}$
+			\end{enumerate}
+		\end{multicols}
+
+%44
+
+	\item The integral $\int_2^4\frac{log x^2}{log x^2 + log\brak{36-12x+x^2}}dx$ is equal to:
+
+		\hfill{(JEE M 2015)}
+
+		\begin{multicols}{4}
+			\begin{enumerate}[label=(\alph*)]
+				\item 1
+				\item 6
+				\item 2
+				\item 4
+			\end{enumerate}
+		\end{multicols}
+
+%45
+
+	\item The area (in sq. units) of the region $\{\brak{x,y}:y^2\geq2x$ and $x^2+y^2\leq4x, x\geq0, y\geq0\}$ is
+		\hfill{(JEE M 2016)}
+
+		\begin{multicols}{2}
+			\begin{enumerate}[label=(\alph*)]
+				\item $\pi-\frac{4\sqrt{2}}{3}$
+				\item $\frac{\pi}{2}-\frac{2\sqrt{2}}{3}$
+				\item $\pi-\frac{4}{3}$
+				\item $\pi-\frac{8}{3}$ 
+			\end{enumerate}
+		\end{multicols} 
+\end{enumerate}
+\end{document}
