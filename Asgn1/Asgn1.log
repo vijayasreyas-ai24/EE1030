@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.2)  16 AUG 2024 10:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.2)  16 AUG 2024 12:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1391,12 +1391,22 @@ Overfull \hbox (3.57593pt too wide) in paragraph at lines 154--155
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 158--161
+[]\OT1/txr/m/n/12 12) The in-te-gral
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--161
+[] []$\OT1/txr/m/n/12 dx is equal to
+ []
+
+
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
  I therefore use two columns instead on input line 176.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 178--179
-[]\OT1/txr/m/n/12 log$[]\OMS/txsy/m/n/12 j[] [][] [] j$
+[]$[][] []$
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
@@ -1424,7 +1434,7 @@ Package rerunfilecheck Info: File `Asgn1.out' has not changed.
 Here is how much of TeX's memory you used:
  30521 strings out of 474222
  596158 string characters out of 5748734
- 1979975 words of memory out of 5000000
+ 1982975 words of memory out of 5000000
  52026 multiletter control sequences out of 15000+600000
  618010 words of font info for 153 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1436,7 +1446,7 @@ nts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Asgn1.pdf (2 pages, 62271 bytes).
+Output written on Asgn1.pdf (2 pages, 61754 bytes).
 PDF statistics:
  169 PDF objects out of 1000 (max. 8388607)
  147 compressed objects within 2 object streams
