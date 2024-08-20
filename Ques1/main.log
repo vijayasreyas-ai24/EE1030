@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.2)  20 AUG 2024 21:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.2)  20 AUG 2024 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1927,24 +1927,6 @@ LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10> not available
 -dist/fonts/enc/dvips/base/8r.enc}
 
 ])
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*\end
-
-*\end
-
-*\end
-
 *^^[
 
 ! Package inputenc Error: Keyboard character used is undefined
