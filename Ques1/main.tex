@@ -60,11 +60,11 @@
 
 
 \textbf{Question}:\\
-Find the coordinated of a point \textbf{A} where \textit{AB} is the diameter of a circle whose center is $\brak{2, -3}$ and \textbf{B} is the point $\brak{1, 4}$.\\
+Find the coordinated of a point $\vec{A}$ where $AB$ is the diameter of a circle whose center is $\brak{2, -3}$ and $\vec{B}$ is the point $\brak{1, 4}$. \hfill (10, 2019)\\
 
 \textbf{Solution: }
 
-Say center of the circle is \textbf{O}, and \textbf{A} be located at $\myvec{x \\ y}$.
+Say center of the circle is $\vec{O}$, and $\vec{A}$ be located at $\myvec{x \\ y}$.
 
 \begin{table}[h!]    
   \centering
@@ -76,15 +76,15 @@ We know that the midpoint of any diameter of a circle is its center, i.e., in th
 
 Applying section formula, we get
 \begin{align}
-	O &= \frac{A+B}{2} \\
-	2O &= A+B \\
+	\vec{O} &= \frac{\vec{A+B}}{2} \\
+	2\vec{O} &= \vec{A+B} \\
 	2 \myvec{2 \\ -3} &= \myvec{x \\ y} + \myvec{1 \\ 4} \\
 	\myvec{4 \\ -6} &= \myvec{x \\ y} + \myvec{1 \\ 4} \\
-	\myvec{x \\ y} &= \myvec{4 \\ -6} - \myvec{1 \\ 4} \\
+	\implies \myvec{x \\ y} &= \myvec{4 \\ -6} - \myvec{1 \\ 4} \\
 	&= \myvec{3 \\ -10}
 \end{align}
 
-$\therefore$ The point \textbf{A} is $\myvec{3 \\ -10}$. \\
+$\therefore$ The point $\vec{A}$ is $\myvec{3 \\ -10}$. \\
 
 \begin{figure}[H]
    \centering
@@ -95,7 +95,8 @@ $\therefore$ The point \textbf{A} is $\myvec{3 \\ -10}$. \\
 
 Code for plotting points and circle
 \begin{lstlisting}
-	codes/code.py
+	codes/compute_b.c
+	codes/plot_circle.py
 \end{lstlisting}
 
 \end{document}
