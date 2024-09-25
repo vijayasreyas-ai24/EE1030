@@ -15,11 +15,14 @@ int main() {
     printf("Normal Vector: [%d, %d]\n", normal_vector[0], normal_vector[1]);
     printf("Direction Vector: [%d, %d]\n", direction_vector[0], direction_vector[1]);
 
-    // Print points on the line (y = (2/3)x + 2)
+    // Print all points on the line in a single line
+    printf("Line Points: ");
     for (int x = -5; x <= 5; x++) {
         double y = (2.0 / 3.0) * x + 2;  // Rearranged line equation
-        printf("Line Point: [%d, %.2f]\n", x, y);
+        printf("[%d, %.2f]", x, y);
+        if (x < 5) printf(", ");  // Add a comma between points, but not after the last point
     }
+    printf("\n");
 
     return 0;
 }

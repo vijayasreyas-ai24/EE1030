@@ -9,12 +9,9 @@ lines = result.stdout.strip().split('\n')
 normal_vector = eval(lines[0].strip().split(': ')[1])
 direction_vector = eval(lines[1].strip().split(': ')[1])
 
-# Extract line points
-line_points = []
-for line in lines[2:]:
-    if line.startswith("Line Point"):
-        point = eval(line.strip().split(': ')[1])
-        line_points.append(point)
+# Extract line points from the single output line
+line_points_str = lines[2].strip().split(': ')[1]
+line_points = eval('[' + line_points_str + ']')  # Convert string to list of tuples
 
 # Separate line points into x and y coordinates
 x_line, y_line = zip(*line_points)
