@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.2)  25 SEP 2024 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.2)  25 SEP 2024 17:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1900,13 +1900,21 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 ) (./tables/table.tex)
+
+LaTeX Warning: Reference `eq:line-school-dir' on page 1 undefined on input line
+ 87.
+
+
+LaTeX Warning: Reference `line-school-normal' on page 1 undefined on input line
+ 87.
+
 <figs/Figure_1.png, id=31, 837.1275pt x 821.0675pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 101.
+Package pdftex.def Info: figs/Figure_1.png  used on input line 96.
 (pdftex.def)             Requested size: 254.9356pt x 250.0431pt.
 
-Underfull \vbox (badness 1210) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf
 -dist/fonts/enc/dvips/base/8r.enc}
@@ -1916,14 +1924,18 @@ Underfull \vbox (badness 1210) has occurred while \output is active []
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52967 strings out of 474222
- 1254926 string characters out of 5748734
- 1945975 words of memory out of 5000000
- 74400 multiletter control sequences out of 15000+600000
+ 52968 strings out of 474222
+ 1254954 string characters out of 5748734
+ 1944975 words of memory out of 5000000
+ 74402 multiletter control sequences out of 15000+600000
  621907 words of font info for 167 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,15n,109p,1194b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1933,10 +1945,10 @@ xmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on main.pdf (2 pages, 80534 bytes).
+Output written on main.pdf (2 pages, 81180 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
+ 88 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
