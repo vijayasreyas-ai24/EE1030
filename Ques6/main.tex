@@ -1,0 +1,99 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{9-9.2-27}
+\author{AI24BTECH11003 - Badde Vijaya Sreyas}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question}:\\
+Find the area bounded by the curve  $4y=3x^2$ and the line $2y=3x+12$.
+
+
+\solution
+\begin{table}[h!]
+	\centering
+	\input{tables/table}
+	\caption{Information}
+	\label{tab:9-9.2-27}
+\end{table}
+
+The given curve can be expressed as a conic of parameters
+\begin{align}
+	v=\myvec{1&0\\0&0}, u=\myvec{0\\-\frac{2}{3}}, f=0 
+\end{align}
+The given line parameters are
+\begin{align}
+	h=\myvec{0\\ 6},  m=\myvec{1\\\frac{3}{2}}
+\end{align}
+From \eqref{eq:tangent_roots}, the points of intersection of line and conic are
+\begin{align}
+	\vec{x_1} = \myvec{-2\\3},  \vec{x_2} = \myvec{4\\12}
+\end{align}
+As you can see in the figure, the area bounded by the curve $4y=3x^2$ and the line $2y=3x+12$  is given by
+\begin{align}
+	\int_{-2}^{4} \brak{\frac{3x + 12}{2} - \frac{3x^{2}}{4}}dx = 27
+\end{align}
+\newpage
+\begin{figure}[h!]
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{figs/Figure_1.png}
+	\caption{Area Enclosed}
+	\label{fig:9-9.2-27 - Figure -1}
+\end{center}
+\end{figure}
+\end{document}
+
+
