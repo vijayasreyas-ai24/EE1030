@@ -8,7 +8,7 @@ def run_c_program():
     output = result.stdout.strip().split('\n')
     area = float(output[0])
     intersections = [tuple(map(float, line.split())) for line in output[1:]]
-    return area, intersections
+    return area, np.array(intersections)
 
 # Get the area and intersection points from the C program
 area, intersections = run_c_program()
@@ -27,8 +27,8 @@ line_values = line(x_values)
 
 # Plotting
 plt.figure(figsize=(10, 6))
-plt.plot(x_values, curve_values, label=r'$y = \frac{3}{4}x^2$', color='darkblue')  # Dark Blue for the curve
-plt.plot(x_values, line_values, label=r'$y = \frac{3}{2}x + 6$', color='limegreen')  # Lime Green for the line
+plt.plot(x_values, curve_values, label=r'$4y = 3x^2$', color='darkblue')  # Updated label for the curve
+plt.plot(x_values, line_values, label=r'$2y = 3x + 12$', color='limegreen')  # Updated label for the line
 
 # Fill the area between the curves
 plt.fill_between(x_values, curve_values, line_values, 
@@ -36,12 +36,17 @@ plt.fill_between(x_values, curve_values, line_values,
                  color='mediumturquoise', alpha=0.2)  # Medium Turquoise for shaded region
 
 # Plot intersection points
-for x, y in intersections:
-    plt.plot(x, y, 'o', color='teal')  # Mark intersection points
-    plt.text(x, y, f'({x:.1f}, {y:.1f})', fontsize=10, color='teal', ha='right')  # Label intersection points
+plt.plot(intersections[:, 0], intersections[:, 1], 'o', color='teal', label='Intersections')  # Mark intersection points
+
+# Use np.vectorize to annotate intersection points
+annotate_points = np.vectorize(lambda x, y: plt.annotate(f'({x:.1f}, {y:.1f})', (x, y),
+                                                          textcoords="offset points", 
+                                                          xytext=(5,5), ha='center'))
+
+annotate_points(intersections[:, 0], intersections[:, 1])
 
 # Setting the labels and title
-plt.title('Area Enclosed Between the Curve and the Line')  # Updated title
+plt.title('Area Enclosed Between the Curve and the Line')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.axhline(0, color='black', linewidth=0.5, ls='--')
