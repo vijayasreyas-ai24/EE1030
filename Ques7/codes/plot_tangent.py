@@ -1,16 +1,16 @@
 import subprocess
 import matplotlib.pyplot as plt
 import numpy as np
-from fractions import Fraction
+from sympy import Rational, sqrt, latex
 
-# Compile the C program and check for errors
-compile_process = subprocess.run(["gcc", "tangent.c", "-o", "tangent", "-lm"], capture_output=True, text=True)
-if compile_process.returncode != 0:
+# Compile and run the C program, capturing all outputs
+result = subprocess.run(["gcc", "tangent.c", "-o", "tangent", "-lm"], capture_output=True, text=True)
+if result.returncode != 0:
     print("Compilation error:")
-    print(compile_process.stderr)
+    print(result.stderr)
     exit(1)
 
-# Run the C program
+# Run the compiled C program
 result = subprocess.run(["./tangent"], capture_output=True, text=True)
 
 # Check for execution errors
@@ -19,9 +19,9 @@ if result.returncode != 0:
     print(result.stderr)
     exit(1)
 
-# Extract point of tangency and tangent line from the output
+# Extract point of tangency, tangent line, and normal line from the output
 output_lines = result.stdout.splitlines()
-if len(output_lines) < 2:
+if len(output_lines) < 3:
     print("Unexpected output from the C program.")
     print(result.stdout)
     exit(1)
@@ -29,50 +29,50 @@ if len(output_lines) < 2:
 # Parse output
 point_line = output_lines[0].split(": ")[1]
 tangent_line = output_lines[1].split(": ")[1]
+normal_line = output_lines[2].split(": ")[1]
 
 # Extract x and y coordinates of the point of tangency
 x_tangent, y_tangent = map(float, point_line.strip("()").split(", "))
 
-# Set specific coordinates for the point of tangency
-x_tangent_frac = Fraction(41, 48)
-y_tangent_frac = Fraction(3, 4)
-
 # Extract slope and intercept of the tangent line
-slope, intercept = map(float, tangent_line.split(" = ")[1].split("x + "))
+slope_tangent, intercept_tangent = map(float, tangent_line.split(" = ")[1].split("x + "))
+# Extract slope and intercept of the normal line
+slope_normal, intercept_normal = map(float, normal_line.split(" = ")[1].split("x + "))
+
+# Convert slopes and intercepts to fractions
+slope_tangent_frac = Rational(slope_tangent).limit_denominator()
+intercept_tangent_frac = Rational(intercept_tangent).limit_denominator()
+slope_normal_frac = Rational(slope_normal).limit_denominator()
+intercept_normal_frac = Rational(intercept_normal).limit_denominator()
 
 # Create x values for the curve
-x_curve = np.linspace(0.67, 11, 400)  # Start just above 2/3 to avoid NaN values
+x_curve = np.linspace(0.67, 11, 400)  # Avoid NaN values
 y_curve = np.sqrt(3 * x_curve - 2)
 
-# Create x values for the tangent line and original line across a wider range
-x_full = np.linspace(-1, 11, 400)  # Extend the x values for full coverage
-y_tangent_line = slope * x_full + (y_tangent - slope * x_tangent)
+# Create x values for the tangent line, normal line, and original line
+x_full = np.linspace(-1, 11, 400)
+y_tangent_line = slope_tangent * x_full + (y_tangent - slope_tangent * x_tangent)
+y_normal_line = slope_normal * x_full + intercept_normal
 y_original_line = 2 * x_full + 2.5  # Original line: y = 2x + 2.5
 
-# Prepare the tangent line label with a fraction
-intercept_fraction = Fraction(intercept).limit_denominator()
-if intercept_fraction.denominator == 1:
-    tangent_label = f"Tangent Line: $y = {slope:.0f}x - {abs(intercept_fraction.numerator)}$"
-else:
-    tangent_label = f"Tangent Line: $y = {slope:.0f}x - \\frac{{{abs(intercept_fraction.numerator)}}}{{{intercept_fraction.denominator}}}$"
-
 # Create the plot
-plt.figure(figsize=(12, 8))  # Increased figure size for better visibility
+plt.figure(figsize=(12, 8))
 plt.plot(x_curve, y_curve, label='Curve: $y = \\sqrt{3x - 2}$', color='navy')
-plt.plot(x_full, y_tangent_line, label=tangent_label, color='forestgreen', linestyle='--')
+plt.plot(x_full, y_tangent_line, label=f'Tangent Line: $y = {latex(slope_tangent_frac)}x + {latex(intercept_tangent_frac)}$', color='forestgreen', linestyle='--')
+plt.plot(x_full, y_normal_line, label=f'Normal Line: $y = {latex(slope_normal_frac)}x + {latex(intercept_normal_frac)}$', color='crimson', linestyle='--')
 plt.plot(x_full, y_original_line, label='Original Line: $4x - 2y + 5 = 0$', color='black', linestyle='-')
-plt.scatter(float(x_tangent_frac), float(y_tangent_frac), color='lightseagreen', label='Point of Tangency', zorder=5)
+plt.scatter(x_tangent, y_tangent, color='lightseagreen', label='Point of Tangency', zorder=5)
 
-# Label the point of tangency with specified coordinates
-plt.text(float(x_tangent_frac) - 0.5, float(y_tangent_frac) + 0.1, f'({x_tangent_frac}, {y_tangent_frac})', fontsize=10, color='black')
+# Label the point of tangency
+plt.text(x_tangent - 0.5, y_tangent + 0.1, f'({x_tangent:.2f}, {y_tangent:.2f})', fontsize=10, color='black')
 
-plt.title('Tangent to the Curve and Original Line')
+plt.title('Tangent and Normal to the Curve with Original Line')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.axhline(0, color='black', linewidth=0.5, ls='--')
 plt.axvline(0, color='black', linewidth=0.5, ls='--')
-plt.xlim(-1, 11)  # Set x-axis limit
-plt.ylim(-1, 11)  # Set y-axis limit
+plt.xlim(-1, 11)
+plt.ylim(-1, 11)
 plt.grid()
 plt.legend()
 plt.show()

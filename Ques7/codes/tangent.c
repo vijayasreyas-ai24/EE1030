@@ -19,10 +19,15 @@ int main() {
     x_tangent = ((1.5 / slope) * (1.5 / slope) + 2) / 3.0;
     y_tangent = f(x_tangent);
     
+    // Calculate normal line slope
+    double normal_slope = -1 / df(x_tangent);
+    double normal_intercept = y_tangent - normal_slope * x_tangent;
+
     // Print the point of tangency and the tangent line
     printf("Point of Tangency: (%.2f, %.2f)\n", x_tangent, y_tangent);
     printf("Tangent Line: y = %.2fx + %.2f\n", slope, y_tangent - slope * x_tangent);
-    
+    printf("Normal Line: y = %.2fx + %.2f\n", normal_slope, normal_intercept); // Output normal line
+
     return 0;
 }
 
