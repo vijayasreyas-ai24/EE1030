@@ -1,0 +1,257 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=8mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2022-Jun-28 Shift-2}
+\author{AI24BTECH11003 - Badde Vijaya Sreyas}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+\setcounter{enumi}{0}
+ 
+%1
+    \item Let $R_1=\{\brak{a,b}\in N\times N: \abs{a-b}\leq13\}$ and $R_2=\{\brak{a,b}\in N\times N: \abs{a-b}\neq13\}$. Then on N:
+
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item Both $R_1$ and $R_2$ are equivalence relations
+                \item Neither $R_1$ nor $R_2$ is an equivalence relation
+                \item $R_1$ is an equivalence relation but $R_2$ is not
+                \item $R_2$ is an equivalence relation but $R_1$ is not
+            \end{enumerate}
+        \end{multicols}
+
+%2
+    \item Let $f\brak{x}$ be a quadratic polynomial such that $f\brak{-2}+f\brak{3}=0$. If one of the roots of $f\brak{x}=0$ is $-1$, then the sum of the roots of $f\brak{x}=0$ is equal to:
+
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $\frac{11}{3}$
+				\item $\frac{7}{3}$
+				\item $\frac{13}{3}$
+				\item $\frac{14}{3}$
+			\end{enumerate}
+		\end{multicols}
+
+%3
+    \item The number of ways to distribute 30 identical candies among four children $C_1,C_2,C_3$ and $C_4$ so that $C_2$ receives at least four and at most 7 candies, $C_3$ receives at least 2 and at most 6 candies, is equal to:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $205$
+                \item $615$
+                \item $510$
+                \item $430$
+            \end{enumerate}
+        \end{multicols}
+
+%4
+    \item The term independent of $x$ in the expression of $\brak{1-x^2+3x^3}\brak{\frac{5}{2}x^3-\frac{1}{5x^2}}^11,x\neq 0$ is
+
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $\frac{7}{40}$
+				\item $\frac{33}{200}$
+				\item $\frac{39}{200}$
+				\item $\frac{11}{50}$
+			\end{enumerate}
+		\end{multicols}
+
+%5
+    \item If n arithmetic means are inserted between $a$ and 100 such that the ratio of the first mean to the last mean is $1:7$ and $a+n=33$, then the value of $n$ is
+
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $21$
+				\item $22$
+				\item $23$
+				\item $24$
+			\end{enumerate}
+		\end{multicols}
+  
+%6
+    \item Let $f,g:R\to R$ be functions defined by
+        $f\brak{x}=
+        \begin{cases}
+        \left[x\right] & x<0\\
+        \abs{1-x} & x\geq 0
+        \end{cases}
+        $ and 
+        $g\brak{x}=
+        \begin{cases}
+        e^x-x & x<0\\
+        \brak{x-1}^2-1 & x\geq0
+        \end{cases}
+        $ where $\left[x\right]$ denotes the greatest integer less than or equal to $x$. Then, the function $f\circ g$ is discontinuous at exactly:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item one point
+                \item two points
+                \item three points
+                \item four points
+            \end{enumerate}
+        \end{multicols}
+
+%7
+    \item Let $f:R\to R$ be a differentiable function such that $f\brak{\frac{\pi}{4}}=\sqrt{2},f\brak{\frac{\pi}{2}}=0$ and $f'\brak{\frac{\pi}{2}}=1$ and let $g\brak{x}=\int_x^{\frac{\pi}{4}}\brak{f'\brak{t}\sec t+\tan t\sec tf\brak{t}}dt$ for $x\in \left[ \frac{\pi}{4},\frac{\pi}{2}\right)$. Then $\underset{x\to\brak{\frac{\pi}{2}}^{-}}{lim}g\brak{x}$ is equal to
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $2$
+                \item $3$
+                \item $4$
+                \item $-3$
+            \end{enumerate}
+        \end{multicols}
+		
+%8
+    \item Let $f:R\to R$ be a continuous function satisfying $f\brak{x}+f\brak{x+k}=n$, for all $x\in R$ where $k>0$ and $n$ is a positive integer. If $I_1=\int_0^{4nk}f\brak{x}dx$ and $I_2=\int_{-k}^{3k}f\brak{x}dx$, then
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $I_1+2I_2=4nk$
+                \item $I_1+2I_2=2nk$
+                \item $I_1+nI_2=4n^2k$
+                \item $I_1+nI_2=6n^2k$
+            \end{enumerate}
+        \end{multicols}
+
+%9
+    \item The area of the bounded region enclosed by the curve $y=3-\abs{x-\frac{1}{2}}-\abs{x+1}$ and the x-axis is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{9}{4}$
+                \item $\frac{45}{16}$
+                \item $\frac{27}{8}$
+                \item $\frac{63}{16}$
+            \end{enumerate}
+        \end{multicols}
+
+%10
+    \item Let $x=x\brak{y}$ be the solution of the differential equation $2ye^{\frac{x}{y^2}}dx+\brak{y^2-4xe^{\frac{x}{y^2}}}dy=0$ such that $x\brak{1}=0$. Then, $x\brak{e}$ is equal to
+    
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $e\log_e\brak{2}$
+                \item $e^2\log_e\brak{2}$
+                \item $-e\log_e\brak{2}$
+                \item $-e^2\log_e\brak{2}$
+            \end{enumerate}
+        \end{multicols}
+        
+%11
+    \item Let the slope of the tangent to a curve $y=f\brak{x}$ at $\brak{x,y}$ be given by $s\tan\brak{\cos x-y}$. If the curve passes through the point $\brak{\frac{\pi}{4},0}$, then the value of $\int_0^{\frac{\pi}{2}}ydx$ is equal to
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\brak{2-\sqrt{2}}+\frac{\pi}{\sqrt{2}}$
+                \item $2-\frac{\pi}{\sqrt{2}}$
+                \item $\brak{2+\sqrt{2}}+\frac{\pi}{\sqrt{2}}$
+                \item $2+\frac{\pi}{\sqrt{2}}$
+            \end{enumerate}
+        \end{multicols}
+
+%12
+    \item Let a triangle be bounded by the lines $L_1:2x+5y=10;L_2:-4x+3y=12$ and the line $L_3$, which passes through the point P\brak{2, 3}, intersect $L_2$ at A and $L_1$ at B. If the point P divides the line-segment AB, internally in the ratio $1:3$, then the area of the triangle is equal to
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{110}{13}$
+                \item $\frac{110}{13}$
+                \item $\frac{110}{13}$
+                \item $\frac{110}{13}$
+            \end{enumerate}
+        \end{multicols}
+        
+%13
+    \item Let $a>0, b>0$. Let $e$ and $l$ respectively be the eccentricity and length of latus rectum of the hyperbola $\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$. Let $e'$ and $l'$ respectively the eccentricity and length of latus rectum of its conjugate hyperbola. If $e^2=\frac{11}{14}l$ and $\brak{e'}^2=\frac{11}{8}l'$, then the value of $77a+44b$ is equal to
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $100$
+                \item $110$
+                \item $120$
+                \item $130$
+            \end{enumerate}
+        \end{multicols}
+
+%14
+    \item Let $\overrightarrow{a}=\alpha \hat{i}+2\hat{j}-\hat{k}$ and $\overrightarrow{b}=-2\hat{i}+\alpha\hat{j}+\hat{k}$, where $\alpha\in R$. If the area of the parallelogram whose adjacent sides are represented by the vectors $\overrightarrow{a}$ and $\overrightarrow{b}$ is $\sqrt{15\brak{\alpha^2+4}}$, then the value of $2\abs{\overrightarrow{a}}^2+\brak{\overrightarrow{a}\cdot\overrightarrow{b}}\abs{\overrightarrow{b}}^2$ is equal to
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $10$
+                \item $7$
+                \item $9$
+                \item $14$
+            \end{enumerate}
+        \end{multicols}
+
+%15
+    \item If vertex of a parabola is $\brak{2,-1}$ and the equation of its directrix is $4x-3y=21$, then the length of its latus rectum is
+    
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $2$
+                \item $8$
+                \item $12$
+                \item $16$
+            \end{enumerate}
+        \end{multicols}
+
+\end{enumerate}
+
+\end{document}
