@@ -1,0 +1,254 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=8mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2021-Aug-31 Shift-1}
+\author{AI24BTECH11003 - Badde Vijaya Sreyas}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+\setcounter{enumi}{0}
+ 
+%1
+    \item If $\alpha+\beta+\gamma=2\pi$, then the system of equations\\
+    $x+\brak{\cos\gamma}y+\brak{\cos\beta}z=0$\\
+    $\brak{\cos\gamma}x+y+\brak{\cos\alpha}z=0$\\
+    $\brak{\cos\beta}x+\brak{\cos\alpha}y+z=0$\\
+    has:
+
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item no solution
+                \item infinitely many solutions
+                \item exactly two solutions
+                \item a unique solution
+            \end{enumerate}
+        \end{multicols}
+
+%2
+    \item Let $\overrightarrow{a},\overrightarrow{b},\overrightarrow{c}$ be three vectors mutually perpendicular to each other and have the same magnitude. If a vector $\overrightarrow{r}$ satisfies 
+    $\overrightarrow{a}\times\left\{ \brak{\overrightarrow{r}-\overrightarrow{b}}\times\overrightarrow{a} \right\} + \overrightarrow{b}\times\left\{ \brak{\overrightarrow{r}-\overrightarrow{c}}\times\overrightarrow{b} \right\} + \overrightarrow{c}\times\left\{ \brak{\overrightarrow{r}-\overrightarrow{a}}\times\overrightarrow{c} \right\} = \overrightarrow{0}$, then $\overrightarrow{r}$ is equal to:
+
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $\frac{1}{3}\brak{\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}}$
+				\item $\frac{1}{3}\brak{2\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}}$
+				\item $\frac{1}{2}\brak{\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}}$
+				\item $\frac{1}{2}\brak{\overrightarrow{a}+\overrightarrow{b}+2\overrightarrow{c}}$
+			\end{enumerate}
+		\end{multicols}
+
+%3
+    \item The domain of the function $f\brak{x}=\arcsin\brak{\frac{3x^2+x-1}{\brak{x-1}^2}}+\arccos\brak{\frac{x-1}{x+1}}$ is:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\sbrak{0, \frac{1}{4}}$
+                \item $\sbrak{-2,0}\cup\sbrak{\frac{1}{4}, \frac{1}{2}}$
+                \item $\sbrak{\frac{1}{4}, \frac{1}{2}}\cup\{0\}$
+                \item $\sbrak{0, \frac{1}{2}}$
+            \end{enumerate}
+        \end{multicols}
+
+%4
+    \item Let $S=\{1,2,3,4,5,6\}$. Then the probability that a randomly chosen onto function $g$ from $S$ to $S$ satisfies $g\brak{3}=2g\brak{1}$ is:
+
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $\frac{1}{10}$
+				\item $\frac{1}{15}$
+				\item $\frac{1}{5}$
+				\item $\frac{1}{30}$
+			\end{enumerate}
+		\end{multicols}
+
+%5
+    \item Let $f:N\to N$ be a function such that $f\brak{m+n}=f\brak{m}+f\brak{n}$ for every $m,n\in N$. If $f\brak{6}=18$, then $f\brak{2}\cdot f\brak{3}$ is equal to:
+
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $6$
+				\item $54$
+				\item $18$
+				\item $36$
+			\end{enumerate}
+		\end{multicols}
+  
+%6
+    \item The distance of the point $\brak{-1, 2, -2}$ from the line of intersection of the planes $2x+3y+2z=0$ and $x-2y+z=0$ is:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{1}{\sqrt{2}}$
+                \item $\frac{5}{2}$
+                \item $\frac{\sqrt{42}}{2}$
+                \item $\frac{\sqrt{34}}{2}$
+            \end{enumerate}
+        \end{multicols}
+
+%7
+    \item Negation of the statement $\brak{p\lor q}\implies\brak{q\lor r}$ is:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $p\land \sim q\land \sim r$
+                \item $\sim p\land q\land \sim r$
+                \item $\sim p\land q\land r$
+                \item $p\land q\land r$
+            \end{enumerate}
+        \end{multicols}
+		
+%8
+    \item If $\alpha=\underset{x\to\frac{\pi}{4}}{lim}\frac{\tan^3 x-\tan x}{\cos\brak{x+\frac{\pi}{4}}}$ and $\beta=\underset{x\to 0}{lim}\brak{\cos x}^{\cot x}$ are the roots of the equation $ax^2+bx-4=0$, then the ordered pair $\brak{a,b}$ is:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\brak{1,-3}$
+                \item $\brak{-1,3}$
+                \item $\brak{-1,-3}$
+                \item $\brak{1,3}$
+            \end{enumerate}
+        \end{multicols}
+
+%9
+    \item The locus of midpoints of the line segments joining $\brak{-3,-5}$ and the points on the ellipse $\frac{x^2}{4}+\frac{y^2}{9}=1$ is:
+
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item $9x^2+4y^2+18x+8y+145=0$
+                \item $36x^2+16y^2+90x+56y+145=0$
+                \item $36x^2+16y^2+108x+80y+145=0$
+                \item $36x^2+16y^2+72x+32y+145=0$
+            \end{enumerate}
+        \end{multicols}
+
+%10
+    \item If $\frac{dy}{dx}=\frac{2^xy+2^y\cdot 2^x}{2^x+2^{x+y}\log_e2}, y\brak{0}=0$, then for $y=1$, the value of x lies in the interval:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\brak{1,2}$
+                \item $\left( \frac{1}{2},1\right]$
+                \item  $\brak{2,3}$
+                \item $\left( 0,\frac{1}{2}\right]$
+            \end{enumerate}
+        \end{multicols}
+        
+%11
+    \item An angle of intersection of the curves, $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ and $x^2+y^2=ab,a>b$, is:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\arctan\brak{\frac{a+b}{\sqrt{ab}}}$
+                \item $\arctan\brak{\frac{a-b}{2\sqrt{ab}}}$
+                \item $\arctan\brak{\frac{a-b}{\sqrt{ab}}}$
+                \item $\arctan\brak{2\sqrt{ab}}$
+            \end{enumerate}
+        \end{multicols}
+
+%12
+    \item If $y\frac{dy}{dx}=x\sbrak{\frac{y^2}{x^2}+\frac{\phi\brak{\frac{y^2}{x^2}}}{\phi'\brak{\frac{y^2}{x^2}}}},x>0,\phi>0$, and $y\brak{1}=-1$, then $\phi\frac{y^2}{x^4}$ is equal to:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $4\phi\brak{2}$
+                \item $4\phi\brak{1}$
+                \item $2\phi\brak{1}$
+                \item $\phi\brak{1}$
+            \end{enumerate}
+        \end{multicols}
+        
+%13
+    \item The sum of the roots of the equation $x+1-2\log_2\brak{2+2^x}+2\log_4\brak{10-2^{-x}}=0$, is:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\log_2 14$
+                \item $\log_2 11$
+                \item $\log_2 12$
+                \item $\log_2 13$
+            \end{enumerate}
+        \end{multicols}
+
+%14
+    \item If z is a complex number such that $\frac{z-i}{z-1}$ is purely imaginary, then the minimum value of $\abs{z-\brak{3+3i}}$ is:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $2\sqrt{2}-1$
+                \item $3\sqrt{2}$
+                \item $6\sqrt{2}$
+                \item $2\sqrt{2}$
+            \end{enumerate}
+        \end{multicols}
+
+%15
+    \item Let $a_1,a_2,a_3,\cdots$ be an A.P. If $\frac{a_1+a_2+\cdots+a_{10}}{a_1+a_2+\cdots+a_p}=\frac{100}{p^2},p\neq10$, then $\frac{a_{11}}{a_{10}}$ is equal to:
+    
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{19}{21}$
+                \item $\frac{100}{121}$
+                \item $\frac{21}{19}$
+                \item $\frac{121}{100}$
+            \end{enumerate}
+        \end{multicols}
+
+
+
+
+
+\end{enumerate}
+
+\end{document}
