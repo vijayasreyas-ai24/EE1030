@@ -1,0 +1,161 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=8mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2022-Jul-27 Shift-1}
+\author{AI24BTECH11003 - Badde Vijaya Sreyas}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+\setcounter{enumi}{15}
+ 
+%16
+    \item $\brak{p\cap r}\iff \brak{p\cap\brak{\sim q}}$ is equivalent to $\brak{\sim p}$ when $r$ is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $p$
+                \item $\sim p$
+                \item $q$
+                \item $\sim q$
+            \end{enumerate}
+        \end{multicols}
+
+%17
+    \item If the plane P passes through the intersection of two mutually perpendicular planes $2x+ky-5z=1$ and $3kx-ky+z=5,k<3$ and intercepts a unit length on the positive x-axis, then the intercept made by the plane P on the y-axis is 
+
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $\frac{1}{11}$
+				\item $\frac{5}{11}$
+				\item $6$
+				\item $7$
+			\end{enumerate}
+		\end{multicols}
+
+%18
+    \item Let A\brak{1, 1}, B\brak{4, 3}, C\brak{-2, -5} be vertices of a triangle ABC, P be a point on the side BC, and $\Delta_1$ and $\Delta_2$ be the areas of the triangles APB and ABC respectively. If $\Delta_1:\Delta_2=4:7$, then the area enclosed by the lines AP, AC and the x-axis is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{1}{4}$
+                \item $\frac{3}{4}$
+                \item $\frac{1}{2}$
+                \item $1$
+            \end{enumerate}
+        \end{multicols}
+
+%19
+    \item If the circle $x^2+y^2-2gx+6y-19c=0,\ g,c\in R$ passes through the point \brak{6, 1} and its centre lies on the line $x-2cy=8$, then the length of intercept made by the circle n x-axis is 
+
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $\sqrt{11}$
+				\item $4$
+				\item $3$
+				\item $2\sqrt{23}$
+			\end{enumerate}
+		\end{multicols}
+
+%20
+    \item Let a function $f:R\to R$ be defined as:
+    $f\brak{x}=
+    \begin{cases}
+    \int_0^x\brak{5-\abs{t-3}}dt & x>4\\
+    x^2+bx & x\leq 4
+    \end{cases}
+    $ where $b\in R$. If $f$ is continuous at $x=4$, then which of the following statements is NOT true?
+
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item $f$ is not differentiable at $x=4$
+				\item $f'\brak{3}+f'\brak{5}=\frac{35}{4}$
+				\item $f$ is increasing in $\brak{-\infty, \frac{1}{8}}\cup\brak{8,\infty}$
+				\item $f$ has a local minima at $x=\frac{1}{8}$
+			\end{enumerate}
+		\end{multicols}
+  
+%21
+    \item For $k\in R$, let the solutions of the equation $\cos\brak{\arcsin\brak{x\cot\brak{\arctan\brak{\cos\brak{\arcsin x}}}}}=k,0<\abs{x}<\frac{1}{\sqrt{2}}$ be $\alpha$ and $\beta$, where the inverse trigonometric functions take only principal values. If the solutions of the equation $x^2-bx-5=0$ are $\frac{1}{\alpha^2}+\frac{1}{\beta^2}$ and $\frac{\alpha}{\beta}$, then $\frac{b}{k^2}$ is equal to
+
+%22
+    \item The mean and variance of 10 observations were calculated as 15 and 15 respectively by a student who took by mistake 25 instead of 15 for one observation. Then the correct standard deviation is
+		
+%23
+    \item Let the line $\frac{x-3}{7}=\frac{y-2}{-1}=\frac{z-3}{-4}$ intersect the plane containing the lines $\frac{x-4}{1}=\frac{y+1}{-2}=\frac{z}{1}$ and $4ax-y+5z-7a=0=2x-5y-z-3,a\in R$ at the point P$\brak{\alpha,\beta,\gamma}$. Then, the value of $\alpha+\beta+\gamma$ equals
+
+%24
+    \item An ellipse $E:\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ passes through the vertices of the hyperbola $H:\frac{x^2}{49}-\frac{y^2}{64}=-1$. Let the major and minor axes of the ellipse E coincide with the transverse and conjugate axes of the hyperbola $H$. Let the product of the eccentricities of $E$ and $H$ be $\frac{1}{2}$. If $l$ is the length of the latus rectum of the ellipse $E$, then the value of 113l is equal to:
+
+%25
+    \item Let $y=y\brak{x}$ be the solution curve of the differential equation $\sin\brak{2x^2}\log_e\brak{\tan x^2}dy+\brak{4xy-4\sqrt{2}x\sin\brak{x^2-\frac{\pi}{4}}}dx=0, 0<x<\sqrt{\frac{\pi}{2}}$, which passes through the point $\brak{\sqrt{\frac{\pi}{6}},1}$. Then $\abs{y\brak{\sqrt{\frac{\pi}{3}}}}$ is equal to
+        
+%26
+    \item Let $M$ and $N$ be the number of points on the curve $y^5-9xy+2x=0$, where the tangents on the curve are parallel to x-axis and y-axis, respectively. Then the value of $M+N$ equals
+
+%27
+    \item Let $f\brak{x}=2x^2-x-1$ and $S=\left\{ n\in Z:\abs{f\brak{n}}\leq800 \right\}$. Then, the value of $\underset{n\in S}{\sum}f\brak{n}$ is equal to
+        
+%28
+    \item Let S be the set containing all 3$\times$3 matrices with entries from $\left\{ -1,0,1 \right\}$. The total number of matrices $A\in S$ such that the sum of all the diagonal elements of $A^\top A$ is 6 is
+
+%29
+    \item If the length of the latus rectum of the ellipse $x^2+4y^2x+8y-\lambda=0$ is 4, and $l$ is the length of its major axis, then $\lambda+l$ is equal to
+
+%30
+    \item Let $S=\left\{ z\in C:z^2+\Bar{z}=0 \right\}$. Then $\underset{z\in S}{\sum}\brak{Re\brak{z}+Im\brak{z}}$ is equal to
+
+\end{enumerate}
+
+\end{document}
