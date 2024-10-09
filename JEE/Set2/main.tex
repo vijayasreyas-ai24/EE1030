@@ -1,7 +1,15 @@
-%iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal,9pt,onecolumn]{IEEEtran}
+\usepackage[a5paper, margin=8mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -17,8 +25,8 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
 \usepackage{listings}
-\usepackage{gvv}                                        
-%\def\inputGnumericTable{}                                 
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
 \usepackage{array}                                            
@@ -28,121 +36,215 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
-\usepackage{tabularx}
-\usepackage{array}
-\usepackage{float}
-\usepackage{multicol}
-
-
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{problem}{Problem}
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{example}{Example}[section]
-\newtheorem{definition}[problem]{Definition}
-\newcommand{\BEQA}{\begin{eqnarray}}
-\newcommand{\EEQA}{\end{eqnarray}}
-\newcommand{\define}{\stackrel{\triangle}{=}}
-\theoremstyle{remark}
-\newtheorem{rem}{Remark}
-
-% Marks the beginning of the document
 \begin{document}
+
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{2020-Jan-9 Shift-1}
-\author{AI24BTECH11003 - B. Vijaya Sreyas}
-\maketitle
-\newpage
-\bigskip
+\title{2021-Jul-20 Shift-2}
+\author{AI24BTECH11003 - Badde Vijaya Sreyas}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
 \begin{enumerate}
-\setcounter{enumi}{15}
+\setcounter{enumi}{0}
  
-%16
-    \item If for all real triplets $\brak{a, b, c}$, $f\brak{x}=a+bx+cx^2$; then $\int_0^1f\brak{x}dx$ is equal to
-
-        \begin{multicols}{1}
-            \begin{enumerate}
-                \item $2\brak{3f\brak{1}+ 2f\brak{\frac{1}{2}}}$
-                \item $\brak{\frac{1}{3}}\brak{f\brak{0}+f\brak{\frac{1}{2}}}$
-                \item $\brak{\frac{1}{2}}\brak{f\brak{1}+3f\brak{\frac{1}{2}}}$
-                \item ${\frac{1}{6}}\brak{f\brak{0}+f\brak{1}+4f\brak{\frac{1}{2}}}$
-            \end{enumerate}
-        \end{multicols}
-
-%17
-    \item If the number of five digit numbers with distinct digits and 2 at the 10$^{th}$ place is $336k$, then $k$ is equal to:
-
-		\begin{multicols}{4}
-			\begin{enumerate}
-				\item 8
-				\item 7
-				\item 4
-				\item 6
-			\end{enumerate}
-		\end{multicols}
-
-%18
-    \item Let the observations $x_i\brak{1\leq i \leq 10}$ satisfy the equations,
-
-    $\sum_{i=1}^{10} \brak{x_i - 5}=10$
-    and
-    $\sum_{i=1}^{10} \brak{x_i-5}^2=40$.
-    If $\mu$ and $\lambda$ are the mean and variance of observations, $\brak{x_1-3}, \brak{x_2-3}.....\brak{x_10-3}$, then the ordered pair $\brak{\mu, \lambda}$ is equal to:
+%1
+    \item For the natural numbers $m,n$, if $\brak{1-y}^m\brak{1+y}^n=1+a_1y+a_2y^2+\cdots+a_{m+n}y^{m+n}$ and $a_1=a_2=10$, then the value of $\brak{m + n}$ is equal to
 
         \begin{multicols}{4}
             \begin{enumerate}
-                \item $\brak{6, 3}$
-                \item $\brak{3, 6}$
-                \item $\brak{3, 3}$
-                \item $\brak{6, 6}$
+                \item $88$
+                \item $664$
+                \item $100$
+                \item $80$
             \end{enumerate}
         \end{multicols}
 
-%19
-    \item The integral $\int\frac{dx}{\brak{x+4}^{\frac{8}{7}}\brak{x-3}^{\frac{6}{7}}}$ is equal to
+%2
+    \item The value of $\tan\brak{2\arctan\brak{\frac{3}{5}}+\arcsin\brak{\frac{5}{13}}}$ is equal to
+
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item $\frac{-181}{69}$
+                \item $\frac{220}{21}$
+                \item $\frac{-291}{76}$
+                \item $\frac{151}{63}$
+            \end{enumerate}
+        \end{multicols}
+
+%3
+    \item Let $r_1$ and $r_2$ be the radii of the largest and smallest circles, respectively, which pass through the point $\brak{-4,1}$ and having their centres on the circumference of the circle $x^2 +y^2+2x+4y-4=0$. If $\frac{r_1}{r_2}=a+b\sqrt{2}$, then $a+b$ is equal to:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $3$
+                \item $11$
+                \item $5$
+                \item $7$
+            \end{enumerate}
+        \end{multicols}
+
+%4
+    \item Consider the following three statements:\\
+    \brak{A}: If $2+4=7$, then $3+4=8$\\
+    \brak{B}: If $3+5=8$, then the earth is flat\\
+    \brak{C}: If \brak{A} and \brak{B} are true, then $5+6=17$\\
+    Then which of the following statements is correct?
 
 		\begin{multicols}{2}
 			\begin{enumerate}
-				\item $-\brak{\frac{x-3}{x-4}}^{-\frac{1}{7}}+C$
-				\item $\frac{1}{2}\brak{\frac{x-3}{x-4}}^{\frac{3}{7}}+C$
-				\item $\brak{\frac{x-3}{x-4}}^{\frac{1}{7}}+C$
-				\item $-\frac{1}{13}\brak{\frac{x-3}{x-4}}^{-\frac{13}{7}}+C$
+				\item \brak{A} is false but \brak{B} and \brak{C} are true
+                    \item \brak{A} and \brak{C} are true while \brak{B} is false
+                    \item \brak{A} is true while \brak{B} and \brak{C} are false
+                    \item \brak{A} and \brak{B} are false while \brak{C} is true
 			\end{enumerate}
 		\end{multicols}
 
-%20
-    \item In a box, there are 20 cards out of which 10 are labelled as A and remaining 10 are labelled as B. Cards are drawn at random, one after the other and with replacement, till a second A-card is obtained. The probability that the second A-card appears before the third B-card is:
+%5
+    \item The lines $x=ay-1=z-2$ and $x=3y-2=bz-2$, $\brak{ab\neq 0}$ are coplanar, if:
 
-		\begin{multicols}{4}
+		\begin{multicols}{2}
 			\begin{enumerate}
-				\item $\frac{15}{16}$
-				\item $\frac{9}{16}$
-				\item $\frac{13}{16}$
-				\item $\frac{11}{16}$
+				\item $b=1, a\in R-\{0\}$
+				\item $a=1, b\in R-\{0\}$
+				\item $a=2,b=2$
+				\item $a=2,b=3$
 			\end{enumerate}
 		\end{multicols}
 
-%21
-    \item If the vectors $\overrightarrow{p} = \brak{a+1}\hat{i}+a\hat{j}+a\hat{k}$, $\overrightarrow{q} = a\hat{i}+\brak{a+1}\hat{j}+a\hat{k}$, and $\overrightarrow{r} = a\hat{i}+a\hat{j}+\brak{a+1}\hat{k}$ $\brak{a\in R}$ are coplanar and $3\brak{\overrightarrow{p}\cdot\overrightarrow{q}}^2 - \lambda\abs{\overrightarrow{r}\times \overrightarrow{q}}^2=0$, then the value of $\lambda$ is
+%6
+    \item If $\left[x\right]$ denotes the greatest integer less than or equal to $x$, then the value of the integral $\int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}\left[\left[x\right]-\sin x\right]dx$ is equal to:
+    
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $-\pi$
+                \item $\pi$
+                \item $-$
+                \item $1$
+            \end{enumerate}
+        \end{multicols}
 
-%22
-    \item The projection of the line segment joining the points $\brak{1,-1,3}$ and $\brak{2,-4,11}$ on the line joining the points $\brak{-1,2,3}$ and $\brak{3,-2,10}$ is
+%7
+    \item If the real part of the complex number $\brak{1-\cos\theta + 2i\sin\theta}^{-1}$ is $\frac{1}{5}$ for $\theta\in\brak{0,\pi}$, then the value of the integral $\int_0^\theta\sin x\ dx$ is equal to:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $1$
+                \item $2$
+                \item $-1$
+                \item $0$
+            \end{enumerate}
+        \end{multicols}
 		
-%23
-    \item The number of distinct solutions of the equation $\log_{\frac{1}{2}}\abs{\sin x} = 2-\log_{\frac{1}{2}}\abs{\cos x}$ in the interval $\left[0, 2\right]$ is:
+%8
+    \item Let $f:R-\left\{\frac{\alpha}{6}\right\}\rightarrow R$ be defined by $f\brak{x}=\frac{5x+3}{6x-\alpha}$. Then the value of $\alpha$ for which $\brak{f\circ f}\brak{x}=x$, for all $x\in R-\left\{\{\alpha\}{6}\right\}$, is :
 
-%24
-    \item If for $x\geq 0$, $y=y\brak{x}$ is the solution of the differential equation $\brak{1+x}dy=\left[ \brak{1+x}^2 +y-3\right]dx$, $y\brak{2}=0$, then $y\brak{3}$ is equal to:
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item No such $\alpha$ exists
+                \item $5$
+                \item $8$
+                \item $6$
+            \end{enumerate}
+        \end{multicols}
 	
-%25
-    \item The coefficient of $x^4$ in the expansion of $\brak{1+x+x}^{10}$ is
+%9
+    \item If $f:R\rightarrow R$ is given by $f\brak{x}=x+1$, then the value of\\
+    $\underset{x\to\infty}{\lim}\frac{1}{n}\left[f\brak{0}+f\brak{\frac{5}{n}}+f\brak{\frac{0}{n}}+\cdots+f\brak{\frac{5\brak{n-1}}{n}}\right]$\\ is:
 
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{3}{2}$
+                \item $\frac{5}{2}$
+                \item $\frac{1}{2}$
+                \item $\frac{7}{2}$
+            \end{enumerate}
+        \end{multicols}
+
+%10
+    \item Let A, B and C be three events such that the probability that exactly one of A and B occurs is \brak{1-k}, the probability that exactly one of B and C occurs is \brak{1-2k}, the probability that exactly one of C and A occurs is \brak{1-k} and the probability of all A, B and C occur simultaneously is $k^2$, where $0<k<1$. Then the probability that at least one of A, B and C occur is:
+
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item greater than $\frac{1}{8}$ but less than $\frac{1}{4}$
+                \item greater than $\frac{1}{2}$
+                \item greater than $\frac{1}{4}$ but less than $\frac{1}{2}$
+                \item exactly equal to $\frac{1}{2}$
+            \end{enumerate}
+        \end{multicols}
+
+%11
+    \item The sum of all the local minimum values of the twice differentiable function $f:R\rightarrow R$ defined by $f\brak{x}=x^3-3x^2-\frac{3f''\brak{x}}{2}+f''\brak{1}$ is:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $-22$
+                \item $5$
+                \item $-27$
+                \item $0$
+            \end{enumerate}
+        \end{multicols}
+
+%12
+    \item Let in a right angled triangle, the smallest angle be $\theta$.If a triangle formed by taking the reciprocal of it's sides is also a right angled triangle, then $\sin \theta$ is equal to:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{\sqrt{5}+1}{4}$
+                \item $\frac{\sqrt{5}-1}{2}$
+                \item $\frac{\sqrt{2}-1}{2}$
+                \item $\frac{\sqrt{5}-1}{4}$
+            \end{enumerate}
+        \end{multicols}
+
+%13
+    \item Let $y=y\brak{x}$ satisfies the equation $\frac{dy}{dx}-\abs{A}=0$, for all $x>0$, where $A=\myvec{y&\sin x & 1 \\ 0 & -1 & 1 \\ 2 & 0 & \frac{1}{x}}$. If $y\brak{\pi}=\pi+2$, then the value of $y\brak{\frac{\pi}{2}}$ is:
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{\pi}{2}+\frac{4}{\pi}$
+                \item $\frac{\pi}{2}-\frac{1}{\pi}$
+                \item $\frac{3\pi}{2}-\frac{1}{\pi}$
+                \item $\frac{\pi}{2}-\frac{4}{\pi}$
+            \end{enumerate}
+        \end{multicols}
+
+%14
+    \item Consider the line L given by the equation $\frac{x-3}{2}=\frac{y-1}{1}=\frac{z-2}{1}$. Let Q be the mirror the image of the point $\brak{2,3,-1}$ with respect to L. Let a plane P be such that it passes through Q, and the line L is perpendicular to P. Then which of the following points is on the plane P?
+
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $\brak{-1, 1, 2}$
+            \item $\brak{1, 1, 1}$
+            \item $\brak{1, 1, 2}$
+            \item $\brak{1, 2, 2}$
+        \end{enumerate}
+    \end{multicols}
+
+%15
+    \item If the mean and variance of six observations 7, 10, 11, 15, $a$, $b$ are $10$ and $\frac{20}{3}$, respectively, then the value of $\abs{a-b}$ is equal to:
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $9$
+            \item $11$
+            \item $7$
+            \item $1$
+        \end{enumerate}
+    \end{multicols}
+        
 \end{enumerate}
 
 \end{document}
