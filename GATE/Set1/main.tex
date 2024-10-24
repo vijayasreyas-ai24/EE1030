@@ -1,0 +1,271 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=8mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2008 Aerospace Engineering}
+\author{AI24BTECH11003 - Badde Vijaya Sreyas}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+\setcounter{enumi}{0}
+ 
+%1
+    \item The function defined by
+    $
+    f(x)=
+    \begin{cases}
+        \sin x, & x<0 \\
+        0, & x=0\\
+        3x^3, & x>0
+    \end{cases}$
+
+        \begin{enumerate}
+            \item Is neither continuous nor differentiable at $x=0$
+            \item Is continuous and differentiable at $x=0$
+            \item Is differentiable but not continuous at $x=0$
+            \item Is continuous but not differentiable at $x=0$
+        \end{enumerate}
+
+%2
+    \item The product of the eigenvalues of the matrix $\myvec{1 & 0 & 1 \\ 0 & 2 & 1 \\ 1 & 1 & -3}$ is
+    
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $4$
+                \item $0$
+                \item $-6$
+                \item $-9$
+            \end{enumerate}
+        \end{multicols}
+
+%3
+    \item Which of the following equations is a LINEAR ordinary differential equation?
+
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item $\frac{d^2y}{dx^2}+\frac{dy}{dx}+2y^2=0$
+                \item $\frac{d^2y}{dx^2}+y\frac{dy}{dx}+2y=0$
+                \item $\frac{d^2y}{dx^2}+x\frac{dy}{dx}+2y=0$
+                \item $\brak{\frac{dy}{dx}}^2+\frac{dy}{dx}+2y=0$
+            \end{enumerate}
+        \end{multicols}
+
+%4
+    \item To transfer a satellite from an elliptical orbit to a circular orbit having radius equal to the apogee distance of the elliptical orbit, the speed of the satellite should be
+
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item increased at the apogee
+				\item decreased at the apogee
+				\item increased at the perigee
+				\item decreased at the perigee
+			\end{enumerate}
+		\end{multicols}
+
+%5
+    \item The service ceiling of a transport aircraft is defined as the altitude
+
+       \begin{enumerate}
+            \item That is halfway between sea level and absolute ceiling
+            \item at which it can cruise at one engine operational
+            \item at which it's maximum rate of climb is zero
+            \item at which it's maximum rate of climb is $0.508m/s$
+        \end{enumerate}
+  
+%6
+    \item The drag of an aircraft in steady climbing flight at a given forward speed is 
+
+        \begin{enumerate}
+            \item inversely proportional to climb angle
+            \item higher than drag in steady level flight at the same forward speed
+            \item lower than drag in steady level flight at the same forward speed
+            \item independent of climb angle
+        \end{enumerate}
+
+%7
+    \item In steady, level turning flight of an aircraft at a load factor $'n'$, the ratio of horizontal component of lift and aircraft weight is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\sqrt{n-1}$
+                \item $\sqrt{n+1}$
+                \item $\sqrt{n^2-1}$
+                \item $\sqrt{n^2+1}$
+            \end{enumerate}
+        \end{multicols}
+		
+%8
+    \item The parameters that remain constant in a cruise climb of an aircraft are 
+
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item equivalent airspeed and lift coefficient
+                \item altitude and lift coefficient
+                \item equivalent airspeed and altitude
+                \item lift coefficient and aircraft mass
+            \end{enumerate}
+        \end{multicols}
+
+%9
+    \item The maximum thickness to chord ratio for the NACA 24012 airfoil is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $0.01$
+                \item $0.12$
+                \item $0.24$
+                \item $0.40$
+            \end{enumerate}
+        \end{multicols}
+
+%10
+    \item The maximum possible value of pressure coefficient $C_p$ in incompressible flow is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $0.5$
+                \item $1$
+                \item $\pi$
+                \item $\infty$
+            \end{enumerate}
+        \end{multicols}
+        
+%11
+    \item An irrotational and inviscid flow can become rotational on passing through a
+
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item normal shock wave
+                \item oblique shock wave
+                \item curved shock wave
+                \item Mach wave
+            \end{enumerate}
+        \end{multicols}
+
+%12
+    \item Laminar flow airfoils are used to reduce 
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item trim drag
+                \item skin friction drag
+                \item induced drag
+                \item wave drag
+            \end{enumerate}
+        \end{multicols}
+        
+%13
+    \item The degree of reaction of an impulse turbine is 
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $2$
+                \item $0.75$
+                \item $0.5$
+                \item $0$
+            \end{enumerate}
+        \end{multicols}
+
+%14
+    \item In a convergent-divergent \brak{CD} nozzle of a rocket motor, the wall heat flux is maximum at
+
+        \begin{enumerate}
+            \item the exit of the divergent portion of the CD nozzle
+            \item the entry to the convergent portion of the CD nozzle
+            \item the throat of the CD nozzle
+            \item the mid-length of the divergent portion of the CD nozzle
+        \end{enumerate}
+
+%15
+    \item In a scramjet engine, the Mach number at the entry to the combustion chamber is around
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $0$
+                \item $0.3$
+                \item $2$
+                \item $6$
+            \end{enumerate}
+        \end{multicols}
+
+%16
+    \item DB denotes double base solid propellant.\\
+    LOX-RPI denotes liquid oxygen - kerosene combination.\\
+    LOX-LH$_2$ denotes liquid oxygen - hydrogen combination.\\
+
+    The correct order of increasing specific impulse is 
+
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item DB$<$LOX-RPI$<$LOX-LH$_2$
+                \item LOX-RPI$<$DB$<$LOX-LH$_2$
+                \item LOX-LH$_2<$DB$<$LOX-RPI
+                \item DB$<$LOX-LH$_2<$LOX-RPI
+            \end{enumerate}
+        \end{multicols}
+
+%17
+    \item In the absence of body movements, the symmetry of the stress tensor is derived from
+
+        \begin{enumerate}
+            \item force equilibrium conditions
+            \item movement equilibrium conditions
+            \item linear relations between stresses and strains
+            \item compatibility conditions
+        \end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}
