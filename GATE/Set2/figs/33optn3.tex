@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \draw [black, densely dashed] plot [smooth, tension=0.75] coordinates {(0.25,-0.1) (1.125,-0.16) (2,-0.22) (2.875,-0.16) (3.75,-0.1)};
+    \draw [black, densely dashed] plot [smooth, tension=0.75] coordinates {(0.25,0.1) (1.1,0.16) (2,0.22) (2.9,0.16) (3.75,0.1)};
+    \draw [black, densely dashed] plot [smooth, tension=1] coordinates {(0.25,0.3) (1.7,0.5) (2,0.575) (2.3,0.5) (3.75,0.3)};
+    \draw [black, densely dashed] plot [smooth, tension=1] coordinates {(0.25,-0.3) (1.7,-0.5) (2,-0.575) (2.3,-0.5) (3.75,-0.3)};
+    \filldraw[fill=white, draw=black] (2,0) circle (0.5cm);
+
+    \draw [black, thick, ->] (4, 1.5) to (4, 2) node[left]{\small y};
+    \draw [black, thick, ->] (4, 1.5) to (4.5, 1.5) node[right]{\small x};
+\end{tikzpicture}

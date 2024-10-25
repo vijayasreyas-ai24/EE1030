@@ -1,0 +1,18 @@
+
+\resizebox{0.35\textwidth}{!}{
+\begin{tikzpicture}
+    \centering
+    \draw [black, -latex] (0,0) node[anchor = south west]{O} to (0,5) node[above]{z};
+    \draw [black, -latex] (0,0) to (4,0) node[right]{y};
+    \draw [black, -latex] (0,0) to (-2,-2) node[below]{x};
+    \draw [black, -latex] (0,0) to (2.2,-2.2) node[right]{$\hat{r}$};
+    \draw [black, very thick] (0,0) to (1.54, -1.54) node[right]{\small Q};
+    \draw [black, dashed, <-] (-0.2,0) to (-0.2, 1.6) node[above]{$d$};
+    \draw [black, dashed, ->] (-0.2, 2.1) to (-0.2, 3.8);
+    \draw [black, dashed, <->] (-0.1, -0.2) to node[below]{\small $L$} (1.44, -1.74);
+    \draw [black, -latex] plot [smooth, tension=1] coordinates {(0.15, 4.6) (0, 4.65) (-0.15, 4.55) (0, 4.45) (0.1, 4.5)} node[right]{\small $\omega$};
+    \draw [black, -latex] plot [smooth, tension=1] coordinates {(-0.25, -0.25) (0, -0.3) (0.275, -0.275)};
+    \filldraw[black] (0,3.8) circle (2pt) node[right]{$P$};
+    \node [font=\small] at (-0.2, -0.45) {$\phi$};
+\end{tikzpicture}
+}
