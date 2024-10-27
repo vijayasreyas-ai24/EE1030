@@ -1,0 +1,229 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=8mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2011 XE}
+\author{AI24BTECH11003 - Badde Vijaya Sreyas}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Common Data for Questions 19 and 20}
+
+A flow has velocity field given by $\overrightarrow{V}=2x\hat{i}-2y\hat{j}$
+\begin{enumerate}
+\setcounter{enumi}{0}
+
+%1
+    \item The velocity potential $\phi\brak{x,y}$ for the flow is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $2x-2y+$ const
+                \item $2xy+$ const
+                \item $x^2+y^2+$ const
+                \item $x^2-y^2+$ const
+            \end{enumerate}
+        \end{multicols}
+
+%2
+    \item The streamlines for the velocity field look like
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item \input{figs/B20optn1}
+                \item \input{figs/B20optn2}
+                \item \input{figs/B20optn3}
+                \item \input{figs/B20optn4}
+            \end{enumerate}
+        \end{multicols}
+        
+\textbf{Common Data for questions 21 and 22}
+
+Two flat parallel plates are separated by a small gap $h$ filled with an incompressible fluid of viscosity $\mu$. Assume that the length and width of the plates to be much larger than the gap $h$. The top plate moves horizontally while the bottom plate is held stationary. The magnitude of difference between the shear stress at the top and bottom walls is found to be $\Delta\tau$.
+
+%3
+    \item The velocity of the top plate is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{h\Delta\tau}{2\mu}$
+                \item $\frac{h\Delta\tau}{\mu}$
+                \item $\frac{2h\Delta\tau}{\mu}$
+                \item $\frac{3h\Delta\tau}{2\mu}$
+            \end{enumerate}
+        \end{multicols}
+
+
+%4
+    \item If a finite width slender object is introduced parallel to the plates in the middle of the gap, the time at which it would have rotated clockwise by $90\degree$ would be
+    
+	\begin{multicols}{4}
+		\begin{enumerate}
+                \item $\frac{2\pi\mu}{\Delta\tau}$
+                \item $\frac{\pi\mu}{\Delta\tau}$
+                \item $\frac{2\pi\mu}{3\Delta\tau}$
+                \item $\frac{\pi\mu}{4\Delta\tau}$
+			\end{enumerate}
+		\end{multicols}
+
+%5
+    \item Which of the following pairs of crystal structures can have the same packing fraction of 0.74?
+
+    \begin{multicols}{4}
+       \begin{enumerate}
+            \item FCC and BCC
+            \item HCP and BCC
+            \item FCC and HCP
+            \item BCC and BCT
+        \end{enumerate}
+    \end{multicols}
+  
+%6
+    \item Which one of the following is NOT CORRECT?
+
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item An edge dislocation can cross slip
+            \item An edge dislocation can glide
+            \item A screw dislocation can cross slip
+            \item An edge dislocation can climb
+        \end{enumerate}
+    \end{multicols}
+
+%7
+    \item Which of the following is NOT CORRECT?
+
+
+            \begin{enumerate}
+                \item Working of lead at $25\degree C$ is hot working
+                \item Working of tungsten at $1000\degree C$ is hot working
+                \item Working of lead at $-100\degree C$ is cold working
+                \item Working of tungsten at $25\degree C$ is cold working
+            \end{enumerate}
+
+		
+%8
+    \item Which one of the following is NOT a ceramic?
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item SiC
+                \item MgO
+                \item TiB$_2$
+                \item TiAl
+            \end{enumerate}
+        \end{multicols}
+
+%9
+    \item If the average degree of polymerization of a polyvinyl chloride (PVC) polymer is 2000, then its average molecular weight (in $\frac{g}{mol}$) is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item 125000
+                \item 119000
+                \item 56000
+                \item 2000
+            \end{enumerate}
+        \end{multicols}
+
+%10
+    \item Which one of the following materials has the lowest coefficient of thermal expansion?
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item Superalloy
+                \item Super Invar
+                \item Spinel
+                \item $\alpha$-brass
+            \end{enumerate}
+        \end{multicols}
+        
+%11
+    \item The color of a metal is determined by the wavelength distribution of the radiation that is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item diffracted
+                \item transmitted
+                \item reflected
+                \item refracted
+            \end{enumerate}
+        \end{multicols}
+
+%12
+    \item Nickel ferrite is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item antiferromagnetic
+                \item ferromagnetic
+                \item diamagnetic
+                \item ferrimagnetic
+            \end{enumerate}
+        \end{multicols}
+        
+%13
+    \item The oxide scale responsible for the excellent corrosion resistance of stainless steels is
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $Cr_2O_3$
+                \item $NiO$
+                \item $Fe_2O_3$
+                \item $Al_2O_3$
+            \end{enumerate}
+        \end{multicols}
+
+\end{enumerate}
+
+\end{document}

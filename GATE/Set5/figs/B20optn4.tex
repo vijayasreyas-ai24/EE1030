@@ -1,0 +1,21 @@
+\resizebox{0.9\columnwidth}{!}{
+\begin{tikzpicture}
+    \draw[black, thick, latex-latex] (-1.25,0) to (1.25,0); 
+    \draw[black, thick, latex-latex] (0,-1.25) to (0,1.25); 
+    \draw[smooth, variable=\x, black] plot coordinates {(0.25/4, 4/4) (0.5/4, 2/4) (1/4, 1/4) (2/4, 0.5/4) (4/4, 0.25/4)};
+    \draw [smooth, variable=\x, black] plot coordinates {(4/4,0.5/4) (2/4,1/4) (1/4,2/4) (0.5/4,4/4)};
+    \draw[smooth, variable=\x, black] plot coordinates { (4/4, 1/4) (2/4,2/4) (1/4,4/4)};
+    \draw[smooth, variable=\x, black] plot coordinates {(-0.25/4, 4/4) (-0.5/4, 2/4) (-1/4, 1/4) (-2/4, 0.5/4) (-4/4, 0.25/4)};
+    \draw [smooth, variable=\x, black] plot coordinates {(-4/4,0.5/4) (-2/4,1/4) (-1/4,2/4) (-0.5/4,4/4)};
+    \draw[smooth, variable=\x, black] plot coordinates { (-4/4, 1/4) (-2/4,2/4) (-1/4,4/4)};
+    \draw[smooth, variable=\x, black] plot coordinates {(-0.25/4, -4/4) (-0.5/4, -2/4) (-1/4, -1/4) (-2/4, -0.5/4) (-4/4, -0.25/4)};
+    \draw [smooth, variable=\x, black] plot coordinates {(-4/4,-0.5/4) (-2/4,-1/4) (-1/4,-2/4) (-0.5/4,-4/4)};
+    \draw[smooth, variable=\x, black] plot coordinates { (-4/4, -1/4) (-2/4,-2/4) (-1/4,-4/4)};
+    \draw[smooth, variable=\x, black] plot coordinates {(0.25/4, -4/4) (0.5/4, -2/4) (1/4, -1/4) (2/4, -0.5/4) (4/4, -0.25/4)};
+    \draw [smooth, variable=\x, black] plot coordinates {(4/4,-0.5/4) (2/4,-1/4) (1/4,-2/4) (0.5/4,-4/4)};
+    \draw[smooth, variable=\x, black] plot coordinates { (4/4, -1/4) (2/4,-2/4) (1/4,-4/4)};
+    \draw[black, thick, -latex] (1/4,1/4) to ++(0.0001,-0.0001);
+    \draw[black, thick, -latex] (2/4,2/4) to ++(0.0001,-0.0001);
+    \draw[black, thick, -latex] (1.414/4, 1.414/4) to ++(0.0001,-0.0001);
+\end{tikzpicture}
+}
