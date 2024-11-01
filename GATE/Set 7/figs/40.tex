@@ -1,0 +1,23 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [ line width=1pt ] (8,16) rectangle (13.75,15);
+\draw [ line width=1pt ] (8,15) rectangle (9,12.75);
+\draw [ line width=1pt ] (12.75,15) rectangle (13.75,12.75);
+\draw [ line width=1pt ] (9,13.75) rectangle (10.25,12.75);
+\draw [ line width=0.9pt ] (10.25,13.75) rectangle (11.5,12.75);
+\draw (9,12.75) to[short] (9,11.5);
+\draw (10.25,12.75) to[short] (10.25,11.5);
+\draw (11.5,12.75) to[short] (11.5,11.5);
+\draw (12.75,12.75) to[short] (12.75,11.5);
+\draw [<->, >=Stealth] (9,11.25) -- (12.75,11.25)node[pos=0.5, fill=white]{$L_1$};
+\draw [<->, >=Stealth] (9,12.25) -- (10.25,12.25)node[pos=0.5, fill=white]{$L_2$};
+\draw [<->, >=Stealth] (10.25,12.25) -- (11.5,12.25)node[pos=0.5, fill=white]{$L_3$};
+\node [font=\normalsize] at (12,12.25) {$L_4$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}

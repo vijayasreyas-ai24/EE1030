@@ -1,0 +1,208 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=8mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2015 Mechanical Engineering}
+\author{AI24BTECH11003 - Badde Vijaya Sreyas}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+\setcounter{enumi}{0}
+
+%1
+    \item In the assembly shown below, the part dimensions are: $L_1=22.0^{\pm0.01}mm$, $L_12=L_3=10.0^{\pm0.005}mm$. Assuming the normal distribution of part dimensions, the dimension $L_4$ in $mm$ for assembly condition would be:
+
+    \input{figs/40}
+    
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $2.0^{\pm0.008}$
+            \item $2.0^{\pm0.012}$
+            \item $2.0^{\pm0.016}$
+            \item $2.0^{\pm0.020}$
+        \end{enumerate}
+    \end{multicols}
+
+%2
+    \item A DC welding power source has a linear voltage-current $\brak{V-I}$ characteristic with open circuit voltage of 300 A. For maximum arc power, the current (In Amperes) should be set as \rule{1cm}{0.15mm}
+
+%3
+    \item A triangular faucet in a CAD model has vertices $P_1\brak{0,0,0}$; $P_2\brak{1,1,0}$ and $P_3\brak{1,1,1}$. The area of the facet is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $0.500$
+            \item $0.707$
+            \item $1.414$
+            \item $1.732$
+        \end{enumerate}
+    \end{multicols}
+
+
+%4
+    \item Following data refers to the activities of a project where node 1 refers to the start and node 5 refers to the end of the project.
+
+    \begin{table}[h]
+        \centering
+        \input{tables/table-43}
+        \label{tab:43}
+    \end{table}
+
+    The critical path (CP) in the network is
+    
+	\begin{multicols}{4}
+		\begin{enumerate}
+                \item $1-2-3-5$
+                \item $1-4-3-5$
+                \item $1-2-3-4-5$
+                \item $1-4-5$
+			\end{enumerate}
+		\end{multicols}
+
+%5
+    \item For a canteen, the actual demand for disposable cups was 500 units in January and 600 units in February. The forecast for the month of January was 400 units. The forecast for the month of march considering smoothing coefficient as 0.75 is \rule{1cm}{0.15mm}
+
+%6
+    \item An orthogonal turning operation is carried out under the following conditions: rake angle$=5\degree$, spindle rotation speed $=400$rpm; axial feed $=0.4\frac{m}{min}$ and radial depth of cut $=5$mm. The chip thickness, $t_c$, is found to be 3mm. The shear angle (in degrees) in this turning process is \rule{1cm}{0.15mm}. 
+
+%7
+
+    \item The solidification time of a casting is proportional to $\brak{\frac{V}{A}}^2$, where $V$ is the volume of the casting, and $A$ is the total casting surface area losing heat. Two cubes of the same material and size are cast using sand casting process. The top face of one of the cubes is completely insulated. The ratio of the solidification time for the cube with top insulated to that of the other cube is
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $\frac{25}{36}$
+            \item $\frac{36}{25}$
+            \item $1$
+            \item $\frac{6}{5}$
+        \end{enumerate}
+    \end{multicols}
+
+%8
+    
+    \item In a slab rolling operation, the maximum thickness reduction $\brak{\Delta h_{max}}$ is given by $\Delta h_{max}=\mu^2R$, where $R$ is the radius of the roll and $\mu$ is the coefficient of friction between the roll and the sheet. If $\mu=0.1$, the maximum angle subtended by the deformation zone at the center of the roll (bite angle in degrees) is \rule{1cm}{0.15mm}
+
+%9
+        
+    \item Considering massless rigid rod and small oscillations, the natural frequency (in $\frac{rad}{s}$) of vibration of the system shown in the figure is
+
+    \input{figs/48}
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $\sqrt{\frac{400}{1}}$
+            \item $\sqrt{\frac{400}{2}}$
+            \item $\sqrt{\frac{400}{3}}$
+            \item $\sqrt{\frac{400}{4}}$
+        \end{enumerate}
+    \end{multicols}
+
+%10
+    
+    \item For the truss shown in figure, the magnitude of force in member $PR$ and the support reaction at $R$ are respectively
+    
+    \input{figs/49}
+
+
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $122.47kN$ and $50kN$
+            \item $70.71kN$ and $100kN$
+            \item $70.71kN$ and $50kN$
+            \item $81.65kN$ and $100kN$
+        \end{enumerate}
+    \end{multicols}
+
+%11
+    
+    \item A ball of mass 0.1kg, initially at rest, is dropped from a height of 1m. Ball hits the ground and bounces off the ground. Upon impact with the ground, the velocity reduces by 20\%. The height (in m) to which the ball will rise is \rule{1cm}{0.15mm}
+
+%12
+    
+    \item A pinion with radius $r_1$, and inertia $I_1$ is driving a gear with radius $r_2$ and inertia $I_2$. Torque $\tau_1$ is applied on pinion. The following are free body diagrams of pinion and gear showing important forces ($F_1$ and $F_2$) of interaction. Which of the following relations holds true?
+
+    \input{figs/51}    
+
+    \begin{enumerate}
+        \item $F_1\neq F_2$;
+        $\tau_1=I_1\Ddot{\theta} $;
+        $ F_2=I_2\frac{r_1}{r_2^2}\Ddot{\theta}$
+        \item $F_1= F_2;\tau_1=\left[I_1+I_2\brak{\frac{r_1}{r_2}}^2\right]\Ddot{\theta}; F_2=I_2\frac{r_1}{r_2^2}\Ddot{\theta}$
+        \item $F_1= F_2;\tau_1=I_1\Ddot{\theta}; F_2=I_2\frac{1}{r_2}\Ddot{\theta}$
+        \item $F_1\neq F_2;\tau_1=\left[I_1+I_2\brak{\frac{r_1}{r_2}}^2\right]\Ddot{\theta}; F_2=I_2\frac{1}{r_2}\Ddot{\theta}$
+    \end{enumerate}
+
+
+%13
+    
+    \item A mobile phone has a small motor with an eccentric mass used for vibrator mode. The location of the eccentric mass on motor with respect to center of gravity (CG) of the mobile and the rest of the dimensions of the mobile are shown. The mobile is kept on a flat horizontal surface. 
+
+    \input{figs/52}
+
+    Given in addition that the eccentric mass $=2$ grams, eccentricity $=2.19$ mm, mass of the mobile $=90$ grams, $g=9.81\frac{m}{s^2}$. Uniform speed of the motor in RPM for which the mobile will get just lifted off the ground at the end Q is approximately
+    
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $3000$
+        \item $3500$
+        \item $4000$
+        \item $4500$
+    \end{enumerate}
+    \end{multicols}
+
+
+\end{enumerate}
+
+\end{document}
