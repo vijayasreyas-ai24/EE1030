@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}math.h\PYGZgt{}}
+
+\PYG{c+cp}{\PYGZsh{}define NUM\PYGZus{}POINTS 300 }\PYG{c+c1}{// Number of points on the circle}
+
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{calculateCirclePoints}\PYG{p}{(}\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{x\PYGZus{}C}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{y\PYGZus{}C}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{radius}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{FILE}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{file}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{NUM\PYGZus{}POINTS}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{angle}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{M\PYGZus{}PI}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n}{NUM\PYGZus{}POINTS}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Angle in radians}
+\PYG{+w}{        }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{x\PYGZus{}p}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{x\PYGZus{}C}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{radius}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{cos}\PYG{p}{(}\PYG{n}{angle}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// xp coordinate}
+\PYG{+w}{        }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{y\PYGZus{}p}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{y\PYGZus{}C}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{radius}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{sin}\PYG{p}{(}\PYG{n}{angle}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// yp coordinate}
+\PYG{+w}{        }\PYG{n}{fprintf}\PYG{p}{(}\PYG{n}{file}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZpc{}.2f \PYGZpc{}.2f}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x\PYGZus{}p}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}p}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// Write points to file}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// Pre\PYGZhy{}defined P, C coordinates and radius}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{x\PYGZus{}C}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{3.0}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Center x\PYGZhy{}coordinate}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{y\PYGZus{}C}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{5.0}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Center y\PYGZhy{}coordinate}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{radius}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{6.0}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Radius}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{x\PYGZus{}P}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{\PYGZhy{}2.0}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Point P x\PYGZhy{}coordinate}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{y\PYGZus{}P}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{4.0}\PYG{p}{;}\PYG{+w}{  }\PYG{c+c1}{// Point P y\PYGZhy{}coordinate}
+
+\PYG{+w}{    }\PYG{k+kt}{FILE}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{file}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}output.txt\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{//Open file}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{file}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n+nb}{NULL}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{perror}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Error opening file\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{c+c1}{//Print P, C, and circle points}
+\PYG{+w}{    }\PYG{n}{fprintf}\PYG{p}{(}\PYG{n}{file}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}P \PYGZpc{}.2f \PYGZpc{}.2f}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x\PYGZus{}P}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}P}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{fprintf}\PYG{p}{(}\PYG{n}{file}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}C \PYGZpc{}.2f \PYGZpc{}.2f}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x\PYGZus{}C}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}C}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{calculateCirclePoints}\PYG{p}{(}\PYG{n}{x\PYGZus{}C}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}C}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{radius}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{file}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n}{fclose}\PYG{p}{(}\PYG{n}{file}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// Close the file}
+
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

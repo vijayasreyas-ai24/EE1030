@@ -1,0 +1,9 @@
+\beamer@sectionintoc {2}{Problem}{3}{0}{1}
+\beamer@sectionintoc {3}{Solution}{4}{0}{2}
+\beamer@subsectionintoc {3}{1}{Setup and Variable Definitions}{4}{0}{2}
+\beamer@subsectionintoc {3}{2}{Circle Equation Setup}{5}{0}{2}
+\beamer@subsectionintoc {3}{3}{Checking Point Location}{6}{0}{2}
+\beamer@sectionintoc {4}{Figure}{7}{0}{3}
+\beamer@sectionintoc {5}{Codes}{8}{0}{4}
+\beamer@subsectionintoc {5}{1}{Generating points on Circle using C}{8}{0}{4}
+\beamer@subsectionintoc {5}{2}{Plotting the figure using Python}{10}{0}{4}

@@ -1,0 +1,65 @@
+\frametitle{Plotting the figure using Python}
+   \begin{mintedbox}{Python}[break at=.8\textheight]
+import sys
+sys.path.insert(0, '/home/vijaya-sreyas/IITH/EE1030/matgeo/codes/CoordGeo')
+import numpy as np
+import numpy.linalg as LA
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+from line.funcs import *
+from conics.funcs import *
+from triangle.funcs import *
+import params
+import matplotlib.pyplot as plt
+
+# Read the output from the output.txt file
+with open("output.txt", "r") as file:
+    output_lines = file.strip().split('\n')
+
+# Get the coordinates for points P and C
+point_P = np.array(list(map(float, output_lines[0].split()[1:])))  # P coordinates
+point_C = np.array(list(map(float, output_lines[1].split()[1:])))  # C coordinates
+
+# Get the circle points
+data = np.array(np.vstack(list(map(lambda line: np.fromstring(line, sep=' '), output_lines[2:]))))
+
+# Separate the circle points into x and y coordinates
+xp, yp = data[:, 0], data[:, 1]
+
+# Prepare for plotting
+plt.figure(figsize=(8, 8))
+
+# Plot the discrete circle points with smaller size
+plt.scatter(xp, yp, color='k', marker='o', s=5)  # Smaller discrete circle points
+plt.scatter(point_C[0], point_C[1], color='forestgreen', marker='o', s=60, label=f'C {point_C}')  # Center point (C)
+plt.scatter(point_P[0], point_P[1], color='navy', marker='o', s=60, label=f'P {point_P}')  # Point (P)
+
+# Label the points to the right
+plt.text(point_C[0] + 0.3, point_C[1], f'C {point_C}', fontsize=9, ha='left')
+plt.text(point_P[0] + 0.3, point_P[1], f'P {point_P}', fontsize=9, ha='left')
+
+plt.title('Circle and Points involved')  # Updated title
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+
+# Set graph limits to ensure all points are visible
+plt.xlim(-4, 10)  # X-axis limits
+plt.ylim(-2, 12)  # Y-axis limits
+
+# Add gridlines for both odd and even integers
+plt.grid(which='both', linestyle='--', linewidth=0.5)
+plt.xticks(np.arange(-4, 11, 1))  # Set x ticks for odd and even integers
+plt.yticks(np.arange(-2, 13, 1))  # Set y ticks for odd and even integers
+
+plt.gca().set_aspect('equal', adjustable='box')  # Equal aspect ratio
+plt.axhline(0, color='grey', lw=0.5)
+plt.axvline(0, color='grey', lw=0.5)
+plt.legend()
+
+# Save the plot as a PNG file
+plt.savefig('plot.png')
+
+#Close the plot
+plt.close()
+\end{mintedbox}
