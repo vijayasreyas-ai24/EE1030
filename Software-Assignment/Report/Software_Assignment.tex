@@ -1,0 +1,161 @@
+\documentclass[a4paper,12pt]{article}
+
+% Packages
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{titlesec}  % For title formatting
+\geometry{margin=1in}
+\setstretch{1.5}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Eigenvalue Computation for Matrices: Implementation and Analysis}
+\fancyhead[R]{\thepage}
+
+% Title Formatting
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+
+% Cover Page
+\title{
+    \vspace{2cm} % Adjust vertical space
+    \textbf{\Huge Eigenvalue Computation in Matrices: Implementation and Analysis} \\
+    \vspace{1cm} % Adjust vertical space
+    \large EE1030 - Matrix Theory \\
+    \vspace{0.5cm} % Adjust vertical space
+    \large \today
+}
+\author{Vijaya Sreyas Badde\\ \small AI24BTECH11003}
+\date{}
+
+\begin{document}
+
+% Title Page
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% Table of Contents
+% Start page numbering from the Table of Contents
+\setcounter{page}{1}  % Start counting from 1
+\tableofcontents
+\newpage
+
+% 1. Objective
+\section{Objective}
+\label{target}
+To develop a program that computes all distinct eigenvalues of a square matrix $A \in \mathbb{C}^{n \times n}$.
+
+% 2. Algorithm Selection
+\section{Algorithm Selection}
+\label{algo-sel}
+While several approaches to this question exist, each has it's trade-offs in terms of speed, accuracy, and generality.
+
+\subsection{Direct Methods}
+\label{dir-meth}
+    Direct methods like Gaussian Elimination and Full Eigendecomposition solve the characteristic equation: $\det(A - \lambda I) = 0$\\
+While providing exact results, these methods have computational complexity $O(n^4)$, rendering them impractical for large matrices.
+
+\subsection{The Power Method}
+\label{pow-meth}
+    The power method approximates the dominant eigenvalue $\lambda_{\max}$ through iterative transformation: $$v_{k+1} = \frac{A v_k}{|A v_k|}$$
+Limitations include:\\
+$\bullet$ Restricted to largest eigenvalue\\
+$\bullet$ Poor performance with complex eigenvalues\\
+$\bullet$ Convergence rate $O(1 - \frac{\lambda_2}{\lambda_1})$
+
+\subsection{The Jacobi Method}
+\label{jac-math}
+    For symmetric matrices $A^T = A$, the Jacobi method uses orthogonal similarity transformations: $$A_{k+1} = P_k^T A_k P_k$$
+Where $P_k$ represents a sequence of rotation matrices designed to zero off-diagonal elements.\\
+Characteristics:\\
+$\bullet$ Time complexity: $O(n^3)$\\
+$\bullet$ Excellent for symmetric matrices\\
+$\bullet$ Iterative orthogonal transformations
+
+\subsection{QR Algorithm}
+\label{qr-alg}
+    The QR algorithm decomposes matrices through iterative QR decompositions:\\
+$A_0 = A$ and $A_{k+1} = R_k Q_k$\\
+With a shift strategy:\\
+$A_k \leftarrow (A_k - \mu I)$ and $A_k \leftarrow Q_k R_k + \mu I$\\
+Although it becomes prohibitively expensive for larger matrices, it demonstrates robust performance for a wide range of matrix types and provides a comprehensive eigenvalue extraction approach.
+
+% 3. The Hybrid Approach
+\section{Current Implementation}
+\label{curr-imp}
+    Our current implementation takes a hybrid approach, combining sophisticated techniques to address the inherent challenges of eigenvalue computation.
+
+\subsection{Computational Strategy}
+\label{comp-strat}
+    The implementation supports two primary computational strategies:
+    
+    $\bullet$ A Jacobi rotation method for symmetric matrices
+    
+    $\bullet$ A complex QR shift algorithm for non-symmetric matrices
+
+\subsection{Complex Number Support}
+\label{cpx-numb:sp}
+A critical change in our approach is comprehensive complex number support. The custom-made library\ \textlangle complex\_utils.h\textrangle\  allows
+    
+    $\bullet$ Explicit control over complex number representation.
+    
+    $\bullet$ Custom printing functions.
+    
+    $\bullet$ Specific mathematical operations tailored to our implementation.
+    
+\noindent These have been placed in a separate library and not in the code itself to make the code easier on the eyes.
+
+\subsection{Method Selection Mechanism}
+The accompanying bash script\ \textlangle eigval.sh\textrangle\  serves as an intelligent router, automatically detecting matrix symmetry, and selecting the most appropriate computational method. This ensures optimal algorithm selection without manual intervention.
+
+\noindent\textbf{Symmetric Matrix Handling}
+
+For symmetric matrices, the Jacobi method is employed. This approach leverages the matrix's structural properties to compute eigenvalues through iterative orthogonal transformations.\\
+For the symmetric matrix $A$, the Jacobi method uses:\\
+$A \rightarrow O^T A O$, where $O$ represents orthogonal transformation matrices.
+
+\noindent\textbf{Non-Symmetric Matrix Handling}
+
+Non-symmetric matrices are processed using the QR shift algorithm. This method implements complex number operations, shift strategies, and iterative matrix transformations to converge on eigenvalues.\\ The QR shift algorithm implements:\\
+$\bullet$ Shift Selection: $\mu = \frac{\lambda_{n-1} + \lambda_n}{2}$\\
+$\bullet$ Matrix Transformation: $A_{k+1} = Q_k^{-1} (A_k - \mu I) Q_k + \mu I$
+
+\subsection{Computational Characteristics}
+Some basic and notable characteristics of these codes are:
+
+$\bullet$ Maximum Iteration Limit: 1000
+
+$\bullet$ Convergence Tolerance: $10^{-6}$
+
+$\bullet$ Flexible input parsing supporting comma-separated complex entries
+
+$\bullet$ Stopping Criterion: $|\text{Off-Diagonal Elements}| < \tau$
+
+% 4. Performance Analysis
+\section{Performance Analysis}
+\noindent\textbf{Computational Complexity}
+
+\noindent The implementation maintains a consistent computational complexity:
+
+$\bullet$Time Complexity: O(n³)
+
+$\bullet$Space Complexity: O(n²)
+
+\noindent\textbf{Numerical Stability}
+
+\noindent Error bound estimation:\\
+$|\lambda_{\text{computed}} - \lambda_{\text{exact}}| \leq \epsilon$\\
+Where $\epsilon$ represents machine precision.\\
+
+\noindent These complexity metrics reflect the fundamental challenges of matrix eigenvalue computation, balancing computational efficiency with numerical precision.
+
+% 6. Conclusions
+\section{Conclusions}
+Our eigenvalue computation framework represents a flexible, robust solution capable of handling diverse matrix types. By combining sophisticated numerical techniques with intelligent method selection, we've developed a computational tool that balances efficiency, accuracy, and generality. While there's room for optimization, the current implementation provides a robust solution for practical applications.
+
+\end{document}
+
