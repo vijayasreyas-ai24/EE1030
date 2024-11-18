@@ -18,7 +18,7 @@ This is for any additional prints like iterations, originally made for debugging
 
 * <complex_utils.h> is a custom library, to try to reduce number of lines of code in the main programs themselves.
 * <eigenvalues.c> and <jacobi_method.c> are the main c functions.
-* <eigval.sh> checks symmetry, and chooses the c code. It also compiles the codes.
+* We only run <eigval.sh>, it compiles the c codes, and checks the symmetry of the input matrices.
 
 ## Report
 Self-Explanatory.
