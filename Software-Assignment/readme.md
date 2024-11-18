@@ -3,7 +3,7 @@
 This is an overview of the folder structure.
 
 ## Eigenvalue Algorithms
-This includes the programs for various algorithms
+This includes the programs for algorithms unused in the assignment, but mentioned in the report.
 
 ## Main Assignment
 Holds the main part of the Assignment, the program.
