@@ -1,0 +1,237 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=8mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2020 Engineering Sciences}
+\author{AI24BTECH11003 - Badde Vijaya Sreyas}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+\setcounter{enumi}{0}
+
+%1
+    \item Let $z$ be a complex number. Then the series $\underset{n=0}{\overset{\infty}{\sum}}\frac{z^{2n}}{\brak{2n}!}$ 
+    \hfill{(2020)}
+    
+
+        \begin{enumerate}
+            \item converges for all $z.$
+            \item converges for all $\abs{z}\leq1$ and diverges for $\abs{z}>1.$
+            \item converges for $z=0$ and diverges for any $z\neq0.$
+            \item converges for $\abs{z}<1$ and diverges for $\abs{z}\geq1$
+        \end{enumerate}
+
+
+%2
+    \item Let $\overrightarrow{V}\brak{x,y,z} = ax\overrightarrow{i}-bz\overrightarrow{j} +cy\overrightarrow{k}$ be a vector whose curl is zero. Then necessarily
+    
+    \hfill{(2020)}
+
+        \begin{multicols}{4}
+        \begin{enumerate}
+            \item $a=b=c$
+            \item $a=-b=c$
+            \item $b=c$
+            \item $b=-c$
+        \end{enumerate}
+    \end{multicols}
+
+%3
+    \item Let $f\brak{x}$be a continuous function on the real line such that for any x, $\int_0^{x^2}f\brak{t}dt=x^2\brak{1+x^2}$. Then $f\brak{2}$ is \rule{1cm}{0.15mm}.
+    \hfill{(2020)}
+
+
+%4
+    \item The number of points at which the function $f\brak{x,y} = \frac{x^2}{2}+\frac{y^4}{4}-\frac{y^2}{2}$ has local minima is \rule{1cm}{0.15mm}.
+    \hfill{(2020)}
+    
+
+%5
+    \item Let $f\brak{t}$ be a real-valued differential function on $\brak{-1,1}$ such that $f\brak{0}=0$ and $\abs{\frac{df}{dt}}<1$ for $0<t<1$. Then the series $\underset{n=0}{\overset{\infty}{\sum}}f\brak{0.5}^n$
+    \hfill{(2020)}
+
+
+        \begin{enumerate}
+            \item converges but not absolutely.
+            \item is unbounded.
+            \item converges absolutely.
+            \item is bounded but does not converge.
+        \end{enumerate}
+
+
+%6
+    \item Let $X$ be a random variable with probability density function
+    
+    \begin{center}
+    $f\brak{t}=
+    \begin{cases}
+        \exp\brak{-t} & \text{for } t\geq0\\
+        0 & \text{for } t<0
+    \end{cases}$
+    \end{center}
+    
+    Let $0<a<b$. Then the probability $\mathbf{P}\brak{X\leq b|X\geq a}$ depends only on
+    \hfill{(2020)}
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $b-a.$
+            \item $b.$
+            \item $a.$
+            \item $a+b.$
+        \end{enumerate}
+    \end{multicols}
+
+%7
+
+    \item Let $A$ be a $3\times3$ matrix such that $A^2=A$. Then it is necessary that 
+    \hfill{(2020)}
+
+
+        \begin{enumerate}
+            \item $A$ is the identity matrix or the zero matrix.
+            \item the determinant of $A^4$ is either 0 or 1.
+            \item the rank of $A$ is 3.
+            \item $A$ has one imaginary eigenvalue.
+        \end{enumerate}
+
+
+%8
+    
+    \item Players $A$ and $B$ take turns to throw a fair dice with six sides. If $A$ is the first player to throw, then the probability of $B$ being the first one to get a six is \rule{1cm}{0.15mm} (round off to two decimal places).
+    \hfill{(2020)}
+
+%9
+        
+    \item Figures below show the velocity and the shear stress profiles for the flow in a duct. In each option, '1' represents velocity profile, and '2' represents shear stress profile.
+
+    Choose the correct option that closely represents the turbulent flow condition.
+    \hfill{(2020)}
+
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item \input{figs/B1Optn1}
+            \item \input{figs/B1Optn2}
+            \item \input{figs/B1Optn3}
+            \item \input{figs/B1Optn4}
+        \end{enumerate}
+    \end{multicols}
+
+%10
+    
+    \item The variation of shear stress $\brak{\tau}$ against strain rate $\brak{\frac{du}{dy}}$ is given in the Figure. Identify the line/curve among P, Q, R and S, that represents an ideal fluid.
+    \hfill{(2020)}
+
+    \input{figs/B2}
+
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item S
+            \item P
+            \item Q
+            \item R
+        \end{enumerate}
+    \end{multicols}
+
+%11
+    
+    \item A body is under stable equilibrium in a homogeneous fluid , where CG and CB are center of gravity and center of buoyancy, respectively. Two statements, '\textbf{P}' and '\textbf{Q}', are given below:\\
+    \textbf{P:} For a fully submerged condition, CG should always be below CB\\
+    \textbf{Q:} For a floating body, CG need not be below CB\\
+    Choose the option that is valid for the present situation.
+    \hfill{(2020)}
+
+
+        \begin{enumerate}
+            \item \textbf{P} is False, \textbf{Q} is True, when metacentre is below CG
+            \item \textbf{P} is False, \textbf{Q} is True, when metacentre is above CG
+            \item \textbf{P} is True, \textbf{Q} is False, when metacentre is below CG
+            \item \textbf{P} is True, \textbf{Q} is False, when metacentre is above CG
+        \end{enumerate}
+
+
+%12
+    
+    \item A laminar hydrodynamic boundary layer over a smooth flat plate is shown in the Figure. The shear stress at the wall is denoted by $\tau_W$. Which one of the following conditions is correct?
+    \hfill{(2020)} 
+
+    \input{figs/B4}
+
+    \begin{enumerate}
+        \item pressure is varying along '$x$' and $\brak{\tau_w}_{x1}>\brak{\tau_w}_{x2}$
+        \item pressure is constant along '$x$' and $\brak{\tau_w}_{x2}>\brak{\tau_w}_{x1}$
+        \item pressure is constant along '$x$' and $\brak{\tau_w}_{x1}>\brak{\tau_w}_{x2}$
+        \item pressure is varying along '$x$' and $\brak{\tau_w}_{x2}>\brak{\tau_w}_{x1}$
+    \end{enumerate}
+
+
+
+%13
+    
+    \item A non-dimensional number known as \textbf{Weber} number is used to characterize which one of the following flows,
+    \hfill{(2020)}
+    
+    \begin{multicols}{2}
+    \begin{enumerate}
+        \item motion of fluid in open channel
+        \item motion of fluid droplets
+        \item motion of fluid at high velocity
+        \item motion of fluid through a pipe
+    \end{enumerate}
+    \end{multicols}
+
+
+\end{enumerate}
+
+\end{document}
